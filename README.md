@@ -3,6 +3,8 @@
 ### Course Description
 This course is a hands-on introduction to the technology and mindsets of making. Projects will introduce students to coding, engineering, and design thinking by leveraging tools like Arduinos, 3D printers, laser cutters, and more. Wearable tech, line-following robots, and electronic music instruments are just a few examples of potential projects created in this course.
 
+***
+
 ### Course Objectives
 
 1. Know how to safely operate the tools of the Makerspace, including the laser cutter, 3D printers, and soldering irons.
@@ -11,12 +13,17 @@ This course is a hands-on introduction to the technology and mindsets of making.
 4. Communicate coding’s enormous potential for innovation and creativity, as well as its applicability to a diverse set of careers and disciplines.
 5. Understand and apply design thinking principles in the creation of digital or physical prototypes.
 
+***
+
 ### Grade Breakdown
+
 * 10% - Class Participation
 * 10% - Homework
 * 20% - Classwork
 * 30% - Project 1
 * 30% - Project 2
+
+***
 
 ### TED Tech Talks
 TBA whether or not this will apply this semester...
@@ -29,6 +36,8 @@ TED Tech Talks are weekly lectures given by students to educate the class about 
 * Wearable Tech (Raspberry Pi, Arduino, etc.)
 * Video Game Design
 * Virtual Reality
+
+***
 
 ### Project Evaluation
 The following criteria are used to evaluate creative assignments:
