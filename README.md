@@ -1,5 +1,7 @@
 # Art-of-Making-S2017
 
+![alt banner](http://blog.jacobean.net/wp-content/uploads/2012/08/cropped-banner.jpg)
+
 ### Course Description
 This course is a hands-on introduction to the technology and mindsets of making. Projects will introduce students to coding, engineering, and design thinking by leveraging tools like Arduinos, 3D printers, laser cutters, and more. Wearable tech, line-following robots, and electronic music instruments are just a few examples of potential projects created in this course.
 
@@ -70,5 +72,3 @@ In the age of the internet, and particularly in the realm of computer programmin
 [1] Ideas regarding coding evaluation were adapted from Harvard's CS50 AP CS Principles Course found here: [http://cs50.wiki/file/view/Grading+CS50.pdf](http://cs50.wiki/file/view/Grading+CS50.pdf)
 
 [2] Ideas regarding coding citations were adapted from MIT's Academic Integrity Guidelines found here:* [https://integrity.mit.edu/handbook/writing-code](https://integrity.mit.edu/handbook/writing-code)
-
-***
