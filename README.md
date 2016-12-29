@@ -12,11 +12,11 @@ This course is a hands-on introduction to the technology and mindsets of making.
 5. Understand and apply design thinking principles in the creation of digital or physical prototypes.
 
 ### Grade Breakdown
-10% - Class Participation
-10% - Homework
-20% - Classwork
-30% - Project 1
-30% - Project 2
+* 10% - Class Participation
+* 10% - Homework
+* 20% - Classwork
+* 30% - Project 1
+* 30% - Project 2
 
 ### TED Tech Talks
 TBA whether or not this will apply this semester...
