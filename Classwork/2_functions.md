@@ -4,7 +4,7 @@ Topics
 * [I. Built-in functions](#i-builtin-functions)
 * [II. Defining Functions](#ii-defining-functions)
 * [III. Arguments](#iii-arguments)
-* [IV. Returning Values](#iii-returning-values)
+* [IV. Returning Values](#iv-returning-values)
 
 Exercises
 * [Exercise 0. Snowman](#ex0)
