@@ -67,7 +67,7 @@ and prevents the LED from burning out.
 
 Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own.
 
-As an example, we can **declare our own function, **blink()**:
+As an example, we can **declare our own function, blink()**:
 
 Functions make our code easier to read and helps to avoid code repetition.
 
@@ -181,14 +181,14 @@ NOTE:
 <a name="ex3"></a>
 <pre>
 <b>Exercise 3:</b>
-Write a function **setBrightness()** that takes two arguments:
+Write a function <b>setBrightness()</b> that takes two arguments:
 
-1. The first is a number between 0 and 100.
+1. The first is an integer between 0 and 100.
 It sets the LED to a level of brightness between 255 (max on) to 0 (off).
 
 Hint: do a little math.
 
-2. The second sets the amount of time the LED delays at that brightness.
+2. The second integer sets the amount of time the LED delays at that brightness.
 </pre>
 
 ```c++
@@ -200,6 +200,7 @@ void setup() {
 
 void loop() {
   // setBrightness() takes an argument between 0 and 100
+  // and an argument representing the delay time
   setBrightness(0, 1000);
   setBrightness(50, 500);
   setBrightness(100, 2000);
