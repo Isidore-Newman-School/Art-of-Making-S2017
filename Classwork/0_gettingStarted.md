@@ -6,7 +6,7 @@ Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/softwa
 
 From the [Arduino website](https://www.arduino.cc/):
 
-    Arduino is an open-source electronics platform based on easy-to-use <b>hardware and software</b>. Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a Twitter message - and turn it into an output - activating a motor, turning on an LED, publishing something online.
+  Arduino is an open-source electronics platform based on easy-to-use hardware and software. Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a Twitter message - and turn it into an output - activating a motor, turning on an LED, publishing something online.
 
 ## What can Arduino do?
 
