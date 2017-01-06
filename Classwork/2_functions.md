@@ -254,6 +254,7 @@ int sum(int a, int b) {
 <b>Exercise 4:</b>
  Write a function, square(), that takes a single argument-
  <b>a float</b> and returns the square of that number- <b>also a float</b>.
+</pre>
 
 ```c++
 int ledPin = 9;
