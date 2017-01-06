@@ -1,4 +1,6 @@
-# 2. Night Light
+To be completed ;)
+
+<!-- # 2. Night Light
 
 We've used the following built-in functions to turn LEDs on/off:
 * digitalWrite()
@@ -236,4 +238,4 @@ void checkLight() {
 }
 ```
 
-Write a function **timer()** that takes an argument and keeps an LED on for the amount of time passed to the function. Call this function when a button is pressed.
+Write a function **timer()** that takes an argument and keeps an LED on for the amount of time passed to the function. Call this function when a button is pressed. -->
