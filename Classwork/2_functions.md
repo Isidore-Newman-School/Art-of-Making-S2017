@@ -7,11 +7,11 @@ Topics
 * [IV. Returning Values](#iv-returning-values)
 
 Exercises
-* [Exercise 0. Snowman](#ex0)
-* [Exercise 1. Variable Snowman](#ex1)
-* [Exercise 2. Variable Snowman](#ex2)
-* [Exercise 3. Variable Snowman](#ex3)
-* [Exercise 4. Variable Snowman](#ex4)
+* [Exercise 0](#ex0)
+* [Exercise 1](#ex1)
+* [Exercise 2](#ex2)
+* [Exercise 3](#ex3)
+* [Exercise 4](#ex4)
 
 ---
 ## I. Built-in functions
