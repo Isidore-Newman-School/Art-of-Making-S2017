@@ -34,7 +34,8 @@ analogWrite([pin number], [value between 0 and 255]);
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-Only ~PWM (pulse width modulation) digital pins can use the function analogWrite(). Which pins can fade LEDs?
+Only ~PWM (pulse width modulation) digital pins can use the function analogWrite().
+Which pins can fade LEDs?
 </pre>
 
 <a name="ex1"></a>
@@ -47,7 +48,7 @@ and prevents the LED from burning out.
 
 1. Set up the circuit below using:
     2 jumpers
-    10K resistor
+    220Ω resistor
     LED
     breadboard
 2. Make the LED:
