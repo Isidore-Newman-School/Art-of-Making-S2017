@@ -106,8 +106,7 @@ Now we're going to read the value of a photoresistor (or light sensor). Begin by
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| RGB LED | <ul><li>photoresistor (light sensor)</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](http://s4a.cat/examples/photoresistor_led.png)
- |
+| light sensor | <ul><li>photoresistor (light sensor)</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](http://s4a.cat/examples/photoresistor_led.png) |
 
 
 In the code below, make note of a few things:
