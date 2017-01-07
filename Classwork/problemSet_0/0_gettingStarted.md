@@ -10,6 +10,17 @@ Exercises
 
 ---
 
+## Circuits and Materials
+
+1. For blinking the LED, we will need:
+  * Arduino
+  * USB
+  * LED
+
+  ![alt text](../images/ledpin13.jpg)
+
+---
+
 Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software). On Windows select **"Windows Installer."**
 
 ## I. What is Arduino?
@@ -25,7 +36,7 @@ From the [Arduino website](https://www.arduino.cc/):
 ## III. Blink LED
 Let's begin by opening and uploading an example file that makes an LED blink: **File > Examples > Basics > Blink**.  Plug the long leg of the LED (the positive leg) into pin 13 and the short leg into ground:
 
-![alt text](ledpin13.jpg)
+![alt text](../images/ledpin13.jpg)
 
 #### Comments
 

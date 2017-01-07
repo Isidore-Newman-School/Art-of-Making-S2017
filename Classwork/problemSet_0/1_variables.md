@@ -13,6 +13,17 @@ Exercises
 
 ---
 
+## Circuits and Materials
+
+1. For blinking the LED, we will need:
+  * Arduino
+  * USB
+  * LED
+
+  ![alt text](../images/ledpin13.jpg)
+
+---
+
 ## I. Our first variable
 Variables in computer science allow us to store values. Variables help to make our code easier to change and easier to read. For example, we can replace the number 13 (representing pin 13) with the variable "ledPin":
 

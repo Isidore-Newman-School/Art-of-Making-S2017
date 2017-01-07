@@ -1,14 +1,25 @@
 # 6. digitalRead()
 
 Topics
-* [I. Serial Monitor](#i-serial-monitor)
-* [II. Analog Input Pins](#ii-analog-input-pins)
-* [III. Light Sensor](#iii-light-sensor)
+* [I. Pushbutton](#i-pushbutton)
+* [II. Latching Button](#ii-latching-button)
 
 Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
-* [Exercise 2](#ex2)
+
+---
+
+## Circuits and Materials
+
+In this chapter we will be using the pushbutton circuit. We'll need:
+  * 10KΩ resistor
+  * pushbutton
+  * LED
+  * 3 jumper wires
+  * breadboard
+
+  ![alt text](../images/pushb.png)
 
 ---
 
@@ -46,8 +57,9 @@ void loop() {
 <pre>
 <b>Exercise 0:</b>
 Write a function <b>timer()</b> that takes an argument and keeps an LED
-on for the amount of time passed to the function. Call this function
-when a button is pressed.
+on for the amount of time passed to the function.
+
+Call this function *when a button is pressed*.
 </pre>
 
 ```c++
@@ -62,7 +74,7 @@ void setup() {
 void loop() {
     boolean state = digitalRead(buttonPin);
 
-    // if / else statement here
+    // if else statement here
 }
 
 // define timer() here
@@ -72,118 +84,71 @@ void loop() {
 
 ## II. Latching Button
 
-Now the objective is to make a button that stays on when we first click it, and turns off when we click it again. We can use boolean variables 
-**(1)** In computer science the "%" (a.k.a. the modulo operator) is surprisingly useful. It is used to calculate the remainder after dividing two numbers. E.g.:
+Now the objective is to make a button that stays on when we first click it, and turns off when we click it again. In order to do so, we're going to need to:
+1. store the previous state of the button in order to detect if the button's state has changed.
+2. store the current state of the light in order to turn it on or off when the click occurs
 
-    5%2 = 1;
-    4%2 = 0;
-    3%2 = 1;
-    2%2 = 0;
-    1%2 = 1;
-    0%2 = 0;
-
-Use the modulo operator to write a function **fizzBuzz()** that uses Serial.print() to print the numbers from 1 to 100, with two exceptions:
-
-1. For numbers divisible by 3, print "Fizz" instead of the number
-2. For numbers divisible by 5 (and not 3), print "Buzz" instead.
-
-```c++
-void setup() {
-    pinMode(ledPin, OUTPUT);
-    Serial.begin(9600);
-}
-
-void loop() {
-    fizzBuzz();
-}
-
-void fizzBuzz() {
-
-}
-```
-
-
-
-2) Fill out the following function, **checkPiezoHit()** so that if:
-* hit is less than 100, turn LED off.
-* hit is less than 200, turn LED 10% on.
-* hit is less than 500, turn LED 50% on.
-* hit is over 500, turn LED 100% on.
-
-```c++
-int ledPin = 11;
-int piezoPin = A0;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(piezoPin, INPUT);
-}
-
-void draw() {
-  checkPiezoHit();
-}
-
-void checkPiezoHit() {
-  int hit = analogRead(piezoPin);
-
-  if (            ) {
-
-    analogWrite(ledPin, 0);
-  }
-  else if (            ) {
-
-
-
-  }
-  else if (            ) {
-
-
-
-  }
-  else {
-
-
-
-  }
-}
-```
-
-3) Check a light sensor. If its value is less than 400, blink an LED. Otherwise, turn it off.
+We will also make use of the [boolean operator &&](https://www.arduino.cc/en/Reference/Boolean).
 
 ```c++
 int ledPin = 13;
-int lightPin = A0;
+int buttonPin = 2;
+
+boolean oldState = false;
+boolean ledOn = false;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
+    pinMode(ledPin, OUTPUT);
+    pinMode(buttonPin, INPUT);    // note the button is INPUT
 }
 
-void draw() {
-  checkLight();
-}
+void loop() {
 
-void checkLight() {
-  int lightLevel = analogRead(lightPin);
+    boolean newState = digitalRead(buttonPin);
 
+    if (newState == HIGH && oldState == LOW) {
 
+      // button has been clicked!
 
+      if (ledOn) {
+        // the LED was on, but button has been clicked, so
+        // let's turn it off.
+        ledOn = false;
+      }
+      else {
+        // LED was off, but the button has been clicked, so
+        // let's turn it on.
+        ledOn = true;
+      }
+    }
 
+    // now that we've checked for a button state change,
+    // let's update the oldState to the current state
+    oldState = newState;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // finally, let's set the LED
+    if (ledOn) {
+      digitalWrite(ledPin, HIGH);
+    }
+    else {
+      digitalWrite(ledPin, LOW);
+    }
 }
 ```
 
-Write a function **timer()** that takes an argument and keeps an LED on for the amount of time passed to the function. Call this function when a button is pressed.
+<a name="ex1"></a>
+<pre>
+<b>Exercise 1:</b>
+To cement your understanding of the latching button, fill out the table below.
+
+At what #s does the LED change state? Why is it necessary to save the oldState? The ledOn state?
+</pre>
+
+| # | status | oldState | newState | ledOn |
+| --- | ---- | ---- | ---- | ---- |
+| 1 | before button is pressed | false | LOW | false |
+| 2 | immediately when button pressed, 1st time |  |  |  |
+| 3 | button still held down |  | HIGH | true |
+| 4 | finger released 1st time | HIGH | LOW |  |
+| 5 | immediately when button pressed, 2nd time |  | HIGH |  |
+| 6 | button still held down, light is off | | LOW | false |

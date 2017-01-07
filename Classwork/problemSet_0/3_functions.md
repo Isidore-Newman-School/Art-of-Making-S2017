@@ -1,6 +1,3 @@
-## TODO link to RGB circuit
-## maybe which circuits going to use in the chapter?
-
 # 3. Functions
 
 Topics
@@ -16,11 +13,23 @@ Exercises
 
 ---
 
+## Circuits and Materials
+
+For this chapter, we'll be using the RGB circuit:
+  * 2 jumpers
+  * 220Ω resistor
+  * LED
+  * breadboard
+
+  ![alt text](../images/arduinores.jpg)
+
+---
+
 ## I. Defining Functions
 
 Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own.
 
-We're going to continue using the [RGB LED circuit](#ii-rgb-leds) from the previous chapter. Let's write a function, **greenLight()**, that sets the LED to green.
+We're going to continue using the RGB LED circuit from the previous chapter. Let's write a function, **greenLight()**, that sets the LED to green.
 
 1. We begin by **declaring our own function, "void greenLight() {"**:
 
@@ -142,7 +151,7 @@ NOTE:
 * An **argument** is the data you pass into the method's parameters.
 
 
-# III. Multiple Arguments
+## III. Multiple Arguments
 
 To pass multiple arguments, we separate the parameters with commas.
 

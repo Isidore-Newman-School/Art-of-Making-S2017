@@ -12,6 +12,19 @@ Exercises
 
 ---
 
+## Circuits and Materials
+
+In section III and IV we will be using a photoresistor / light sensor circuit. We'll need:
+  * 10KΩ resistor
+  * photoresistor (light sensor)
+  * LED
+  * 3 jumper wires
+  * breadboard
+
+  ![alt text](http://s4a.cat/examples/photoresistor_led.png)
+
+---
+
 ## I. if / else
 Conditional statements are used across all programming languages to add logic to code.
 

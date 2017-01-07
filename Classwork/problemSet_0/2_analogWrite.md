@@ -11,6 +11,26 @@ Exercises
 
 ---
 
+## Circuits and Materials
+
+1. In section I. of this chapter, we're going to use the LED circuit:
+  * 2 jumpers
+  * 220Ω resistor
+  * LED
+  * breadboard
+
+  ![alt text](../images/arduinores.jpg)
+
+2. In section II. of this chapter, we're going to use the RGB circuit:
+  * 4 jumpers
+  * 3, 220Ω resistor
+  * RGB LED
+  * breadboard
+
+  ![alt text](../images/rgb.jpg)
+  
+---
+
 ## I. Built-in Functions
 
 So far we've looked at the following built-in functions (we'll define functions in the next chapter):
@@ -62,11 +82,8 @@ to power LEDs (which we'll have to if we're doing to do an analogWrite()),
 we have to use a breadboard and a resistor. The resistor limits current
 and prevents the LED from burning out.
 
-1. Set up the circuit below using:
-    2 jumpers
-    220Ω resistor
-    LED
-    breadboard
+1. Set up the circuit below.
+
 2. Make the LED:
     1) start off
     2) 1/3 max brightness
@@ -75,7 +92,7 @@ and prevents the LED from burning out.
     5) repeat!
 </pre>
 
-![alt text](images/arduinores.jpg)
+![alt text](../images/arduinores.jpg)
 
 ```c++
 int ledPin = 9;
@@ -97,7 +114,7 @@ RGB LEDs are LEDs with a red, green, and blue diode. Together, these diodes can 
 
 Begin by setting up the following circuit:
 
-![alt text](rgb.jpg)
+![alt text](../images/rgb.jpg)
 
 ```c++
 int redPin = 11;
