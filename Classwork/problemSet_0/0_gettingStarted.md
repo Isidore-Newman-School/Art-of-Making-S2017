@@ -3,7 +3,7 @@
 ### Chapter Overview
 
 | Topics | Exercises | Circuit |
-| --- | --- |
+| --- | --- | --- |
 | [I. What is Arduino?](#i-what-is-Arduino) | |
 | [II. What can Arduinos do?](#ii-what-can-Arduino-do) | |
 | [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED |
