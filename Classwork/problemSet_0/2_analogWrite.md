@@ -2,7 +2,7 @@
 
 ## 0. Overview
 
-| # | Topics | Exercises | Circuit | Materials |
+|  | Topics | Exercises | Circuit | Materials |
 | --- | --- | --- | --- | --- |
 | I | [Defining Functions](#i-builtin-functions) | [Exercise 0](#ex0) <br/> [Exercise 1](#ex1) | LED resistor | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> |
 | II | [RGB LEDs](#ii-rgb-leds)| [Exercise 2](#ex2) | RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
