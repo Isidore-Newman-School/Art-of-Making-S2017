@@ -2,13 +2,12 @@
 
 ### Chapter Overview
 
-#### Topics
-* [I. What is Arduino?](#i-what-is-Arduino)
-* [II. What can Arduinos do?](#ii-what-can-Arduino-do)
-* [III. Blink LED](#iii-blink-led)
+| Topics | Exercises | Circuit |
+| --- | --- |
+| [I. What is Arduino?](#i-what-is-Arduino) | |
+| [II. What can Arduinos do?](#ii-what-can-Arduino-do) | |
+| [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED |
 
-#### Exercises
-* [Exercise 0. Blink Speed](#ex0)
 
 #### Circuits and Materials
 
