@@ -2,13 +2,16 @@
 
 ## 0. Overview
 
-|  | Topics | Exercises | Circuit | Materials |
-| --- | --- | --- | --- | --- |
-| I | [Defining Functions](#i-defining-functions) | [Exercise 0](#ex0) <br/> [Exercise 1](#ex1) | RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
-| II | [Parameters and Arguments](#ii-parameters-and-arguments)| - | RGB LED | (see above) |
-| III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 1](#ex1) | RGB LED | (see above) |
-| IV | [Returning Values](#iv-returning-values)| [Exercise 2](#ex2) | RGB LED | (see above) |
+|  | Topics | Exercises | Circuit |
+| --- | --- | --- | --- |
+| I | [Defining Functions](#i-defining-functions) | [Exercise 0](#ex0) | RGB LED |
+| II | [Parameters and Arguments](#ii-parameters-and-arguments)| - | RGB LED |
+| III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 1](#ex1) | RGB LED |
+| IV | [Returning Values](#iv-returning-values)| [Exercise 2](#ex2) | RGB LED |
 
+| Circuit | Materials |
+| --- | --- |
+| RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
 
 ## I. Defining Functions
 
