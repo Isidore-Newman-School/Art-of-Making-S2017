@@ -1,7 +1,6 @@
 # 0. Getting Started
 
 ### Chapter Overview
-**-->** Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software). On Windows select **"Windows Installer."**
 
 #### Topics
 * [I. What is Arduino?](#i-what-is-Arduino)
@@ -14,6 +13,9 @@
 #### Circuits and Materials
 
 1. For blinking the LED, we will need:
+  * Arduino software
+    * Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software).
+    * On Windows select **"Windows Installer."**
   * Arduino
   * USB
   * LED
