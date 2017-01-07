@@ -1,6 +1,10 @@
 # Problem Set 0
 
-Circuits covered in Problem Set 0:
+When you've successfully completed the exercises in chapters 0-4, continue onto [Problem Set 0](problemSet_0.md). This problem set should be *completed individually* and will be submitted for a grade.
+
+---
+
+## Circuits
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
