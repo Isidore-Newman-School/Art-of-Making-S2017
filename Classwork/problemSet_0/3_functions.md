@@ -201,6 +201,8 @@ void loop() {
 // declare stopLight() here
 ```
 
+---
+
 ## IV. Returning Values
 
 So far we've only looked at functions that are "void." These functions execute code, but they do not *return* values. Now we're going to look at functions that do a calculation and *return* a value.
