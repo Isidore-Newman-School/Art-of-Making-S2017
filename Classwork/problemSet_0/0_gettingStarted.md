@@ -1,5 +1,7 @@
 # 0. Getting Started
 
+## Overview
+
 Topics
 * [I. What is Arduino?](#i-what-is-Arduino)
 * [II. What can Arduinos do?](#ii-what-can-Arduino-do)
@@ -8,10 +10,7 @@ Topics
 Exercises
 * [Exercise 0. Blink Speed](#ex0)
 
----
-
-## Circuits and Materials
-
+Circuits and Materials
 1. For blinking the LED, we will need:
   * Arduino
   * USB
