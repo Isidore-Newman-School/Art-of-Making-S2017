@@ -1,88 +1,26 @@
 # Functions
 
 Topics
-* [I. Built-in functions](#i-builtin-functions)
-* [II. Defining Functions](#ii-defining-functions)
-* [III. Arguments](#iii-arguments)
-* [IV. Returning Values](#iv-returning-values)
+* [I. Defining Functions](#i-defining-functions)
+* [II. Arguments](#ii-arguments)
+* [III. Returning Values](#iii-returning-values)
 
 Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 * [Exercise 2](#ex2)
-* [Exercise 3](#ex3)
-* [Exercise 4](#ex4)
-
----
-## I. Built-in functions
-
-So far we've looked at the following built-in functions:
-
-* [setup()](https://www.arduino.cc/en/Reference/Setup) - Every Arduino sketch must have a setup()- called one time at the beginning.
-* [loop()](https://www.arduino.cc/en/Reference/Loop) - Every Arduino sketch must have a loop()- called over and over as long as the Arduino is plugged in.
-* [digitalWrite()](https://www.arduino.cc/en/Reference/DigitalWrite)
-* [delay()](https://www.arduino.cc/en/Reference/Delay)
-
-We're going to look at another built in function: **analogWrite()**. Like digitalWrite(), analogWrite() can be used to power LEDs, but in this case, analogWrite() can *set a range of values between 0-255, not just ON/OFF,* making it possible to fade LEDs.
-
-```c++
-analogWrite([pin number], [value between 0 and 255]);
-```
 
 ---
 
-<a name="ex0"></a>
-<pre>
-<b>Exercise 0:</b>
-Only ~PWM (pulse width modulation) digital pins can use the function analogWrite().
-Which pins can fade LEDs?
-</pre>
-
-<a name="ex1"></a>
-<pre>
-<b>Exercise 1:</b>
-Pin 13 is the only pin with a built-in resistor. If we use any other pin
-to power LEDs (which we'll have to if we're doing to do an analogWrite()),
-we have to use a breadboard and a resistor. The resistor limits current
-and prevents the LED from burning out.
-
-1. Set up the circuit below using:
-    2 jumpers
-    220Ω resistor
-    LED
-    breadboard
-2. Make the LED:
-    1) start off
-    2) 1/3 max brightness
-    3) 2/3 max brightness
-    4) full brightness
-    5) repeat!
-</pre>
-
-![alt text](images/arduinores.jpg)
-
----
-
-## II. Defining Functions
+## I. Defining Functions
 
 Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own.
 
-As an example, we can **declare our own function, blink()**:
+We're going to continue using the [RGB LED circuit](#ii-rgb-leds) from the previous chapter. Let's write a function, **goGreenies()**, that sets the LED to green.
 
-Functions make our code easier to read and helps to avoid code repetition.
+1. We begin by **declaring our own function, "void goGreenies() {"**:
 
-```c++
-// blink declaration
-// "void" is the return type (nothing returned in this case)
-void blink() {
-    digitalWrite(ledPin, HIGH);   // turn the LED on
-    delay(1000);                  // wait for a second
-    digitalWrite(ledPin, LOW);    // turn the LED off by making the voltage LOW
-    delay(1000);                  // wait for a second
-}
-```
-
-**To call our function** we use the function name. The function will not be called by default; we have to call it in the setup() or loop():
+2. Next we **call our function** using the function name followed by parentheses. The function will not be called by default; we have to call it in the setup() or loop():
 
 ```c++
 int ledPin = 9;
@@ -92,10 +30,11 @@ void setup() {
 }
 
 void loop() {
-    blink();      // calling function here
+    blinky();      // calling function here
 }
 
-void blink() {
+// function definition here
+void blinky() {
     digitalWrite(ledPin, HIGH);   
     delay(1000);                  
     digitalWrite(ledPin, LOW);    
@@ -103,11 +42,14 @@ void blink() {
 }
 ```
 
+#### Why functions?
+Functions make our code easier to read and helps to avoid code repetition.
+
 ---
 
-<a name="ex2"></a>
+<a name="ex0"></a>
 <pre>
-<b>Exercise 2:</b>
+<b>Exercise 0:</b>
 1. Using the code you wrote in Exercise 1, create a function, <b>lightStep()</b>,
 that lights up an LED in steps of increasing brightness.
 
@@ -131,20 +73,10 @@ void loop() {
 
 ---
 
-## III. Arguments
+## II. Arguments
 Passing arguments to functions allows us reuse the code of a function but pass in different values. As an example, instead of delaying 1 second every time we call blink(), let's pass an argument to blink() so that we can set the delay to any arbitrary value.
 
 **Step 1:** When we declare the function, we include *parameters* inside of the parentheses of the function header. A parameter tells our function what *type* of data the function should expect. Inside of our function definition we refer to the parameter:
-
-```c++
-// delayTime is a parameter
-void blink(int delayTime) {
-    digitalWrite(ledPin, HIGH);   
-    delay(delayTime);                  
-    digitalWrite(ledPin, LOW);    
-    delay(delayTime);                                 
-}
-```
 
 **Step 2:** When we call our function, we pass an *argument* - in this case, a number representing the delay time.
 
@@ -158,13 +90,13 @@ void setup() {
 void loop() {
   // call blink with arguments
 
-  blink(500);     // 500 is an argument
-  blink(800);     // 800 is an argument
-  blink(200);     // 200 is an argument
+  blinky(500);     // 500 is an argument
+  blinky(800);     // 800 is an argument
+  blinky(200);     // 200 is an argument
 }
 
 // delayTime is a parameter
-void blink(int delayTime) {
+void blinky(int delayTime) {
     digitalWrite(ledPin, HIGH);   
     delay(delayTime);                  
     digitalWrite(ledPin, LOW);    
@@ -176,19 +108,43 @@ NOTE:
 * A **parameter** is a variable in a function definition.
 * An **argument** is the data you pass into the method's parameters.
 
+
+#### Multiple Arguments
+
+To pass multiple arguments, we separate the parameters with commas. For example, to write a blinky() function that has a parameter for the first *and* second delay time:
+
+```c++
+int ledPin = 9;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  blinky(500, 1000);     // pass two arguments
+}
+
+// delayTime is a parameter
+void blinky(int delayTime1, int delayTime2) {
+    digitalWrite(ledPin, HIGH);   
+    delay(delayTime1);                  
+    digitalWrite(ledPin, LOW);    
+    delay(delayTime2);                                 
+}
+```
 ---
 
-<a name="ex3"></a>
+<a name="ex1"></a>
 <pre>
-<b>Exercise 3:</b>
+<b>Exercise 1:</b>
 Write a function <b>setBrightness()</b> that takes two arguments:
 
-1. The first is an integer between 0 and 100.
+1. The first is an integer between 0 and 255.
 It sets the LED to a level of brightness between 255 (max on) to 0 (off).
 
-Hint: do a little math.
-
 2. The second integer sets the amount of time the LED delays at that brightness.
+
+Call your function several times in the loop() with various values for brightness and delay.
 </pre>
 
 ```c++
@@ -199,18 +155,14 @@ void setup() {
 }
 
 void loop() {
-  // setBrightness() takes an argument between 0 and 100
-  // and an argument representing the delay time
-  setBrightness(0, 1000);
-  setBrightness(50, 500);
-  setBrightness(100, 2000);
+  // call your function
 }
 
 // define setBrightness() here
 ```
 
 
-## IV. Returning Values
+## III. Returning Values
 
 So far we've only looked at functions that are "void." These functions execute code, but they do not *return* values. Now we're going to look at functions that do a calculation and *return* a value.
 
@@ -249,9 +201,9 @@ int sum(int a, int b) {
 
 ---
 
-<a name="ex4"></a>
+<a name="ex2"></a>
 <pre>
-<b>Exercise 4:</b>
+<b>Exercise 2:</b>
  Write a function, square(), that takes a single argument-
  <b>a float</b> and returns the square of that number- <b>also a float</b>.
 </pre>
@@ -265,13 +217,10 @@ void setup() {
 
 void loop() {
 
-  float square1 = square(10, 10);
-  float square2 = square(20, 20);
-
   digitalWrite(ledPin, HIGH);
-  delay(square1);
+  delay(square(10, 10));
   digitalWrite(ledPin, LOW);
-  delay(square2);
+  delay(square(20, 20));
 }
 
 // square function goes here
