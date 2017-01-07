@@ -1,6 +1,6 @@
 # 0. Getting Started
 
-## Overview
+## 0. Overview
 
 | Topics | Exercises | Circuit | Materials |
 | --- | --- | --- | --- |
