@@ -1,5 +1,6 @@
 # 0. Getting Started
 
+## Chapter Overview
 **-->** Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software). On Windows select **"Windows Installer."**
 
 ### Topics
