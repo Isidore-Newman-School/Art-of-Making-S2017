@@ -1,34 +1,21 @@
 # 6. digitalRead()
 
-### Chapter Overview
+## 0. Overview
 
-#### Topics
-* [I. Pushbutton](#i-pushbutton)
-* [II. Latching Button](#ii-latching-button)
+|  | Topics | Exercises | Circuit |
+| --- | --- | --- | --- |
+| I | [I. Pushbutton](#i-pushbutton) | [Exercise 0](#ex0) | pushbutton |
+| II | [II. Latching Button](#ii-latching-button) | [Exercise 1](#ex1) | pushbutton |
 
-#### Exercises
-* [Exercise 0](#ex0)
-* [Exercise 1](#ex1)
-
-#### Circuits and Materials
-
-* In this chapter we will be using the pushbutton circuit. We'll need:
-  * 10KΩ resistor
-  * pushbutton
-  * LED
-  * 3 jumper wires
-  * breadboard
-
-  ![alt text](../images/pushb.png)
-
----
 
 ## I. Pushbutton
 In this example, we're going to use [**digitalRead()**](https://www.arduino.cc/en/Reference/DigitalRead) to check whether a button is HIGH or LOW (i.e. on or off, 5 volts or 0 volts, true or false). Unlike analogRead(), digitalRead() doesn't return a range of values- it simply *returns* whether the pin is on or off.
 
 Begin by setting up the circuit:
 
-![alt text](images/pushb.png)
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| pushbutton | <ul><li>pushbutton</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text]![alt text](../images/pushb.png) |
 
 
 ```c++

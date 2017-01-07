@@ -4,15 +4,23 @@
 
 ## 0. Overview
 
-| Topics | Exercises | Circuit | Materials |
+| Topics | Exercises | Circuit |
 | --- | --- | --- | --- |
-| [I. Our first variable](#i-what-is-Arduino) | [Exercise 0](#ex0) | Blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> |
-| [II. Arithmetic with variables](#ii-arithmetic-with-variables) | - | - | - |
-| [III. Data Types](#iii-data-types) | [Exercise 0](#ex0) | - | - |
-| [IV. Operators](#iv-operators) | - | - | - |
+| [I. Our first variable](#i-what-is-Arduino) | [Exercise 0](#ex0) | Blinking LED |
+| [II. Arithmetic with variables](#ii-arithmetic-with-variables) | - |
+| [III. Data Types](#iii-data-types) | [Exercise 0](#ex0) | - |
+| [IV. Operators](#iv-operators) | - | - |
 
 
 ## I. Our first variable
+Setup the following circuit with the LED's long leg plugged into pin 13 and the short led into ground (GND):
+
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> | ![alt text](../images/ledpin13.jpg) |
+
+
+
 Variables in computer science allow us to store values. Variables help to make our code easier to change and easier to read. For example, we can replace the number 13 (representing pin 13) with the variable "ledPin":
 
 ```c++

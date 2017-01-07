@@ -1,29 +1,13 @@
 # 5. Conditionals
 
-### Chapter Overview
+## 0. Overview
 
-#### Topics
-* [I. if / else](#i-if--else)
-* [II. if / else if / else](#ii-if--else-if--else)
-* [III. Night Light](#iii-night-light)
-* [IV. Booleans](#iv-booleans)
-
-#### Exercises
-* [Exercise 0](#ex0)
-* [Exercise 1](#ex1)
-
-#### Circuits and Materials
-
-In section III and IV we will be using a photoresistor / light sensor circuit. We'll need:
-  * 10KΩ resistor
-  * photoresistor (light sensor)
-  * LED
-  * 3 jumper wires
-  * breadboard
-
-  ![alt text](http://s4a.cat/examples/photoresistor_led.png)
-
----
+|  | Topics | Exercises | Circuit |
+| --- | --- | --- | --- |
+| I | [if / else](#i-if--else) | - | - |
+| II | [if / else if / else](#ii-if--else-if--else) | - | - |
+| III | [Night Light](#iii-night-light) | [Exercise 0](#ex0) | light sensor |
+| IV | [Booleans](#iv-booleans) | [Exercise 1](#ex1) | light sensor |
 
 ## I. if / else
 Conditional statements are used across all programming languages to add logic to code.
@@ -80,10 +64,16 @@ void checkIfPositive(int x) {
 
 # III. Night Light
 
+We're going to create a night light. Setup the following circuit:
+
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| light sensor | <ul><li>photoresistor (light sensor)</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](http://s4a.cat/examples/photoresistor_led.png) |
+
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-Our objective now is the create a night light. We want the LED to come on when the light in the room goes dim. Use the circuit from the previous chapter (below), and fill out the missing code in the following code block in order to create the night light:
+To create a night light, the LED must come on when the light in the room goes dim. Fill out the missing code in the following code block in order to create the night light:
 </pre>
 
 ```c++
@@ -110,9 +100,6 @@ void loop() {
   }
 }
 ```
-
-![alt text](http://s4a.cat/examples/photoresistor_led.png)
-
 
 ---
 

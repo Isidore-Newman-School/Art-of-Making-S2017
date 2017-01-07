@@ -2,11 +2,11 @@
 
 ## 0. Overview
 
-| Topics | Exercises | Circuit | Materials |
-| --- | --- | --- | --- |
-| [I. What is Arduino?](#i-what-is-Arduino) | - | - | - |
-| [II. What can Arduinos do?](#ii-what-can-Arduino-do) | - | - | - |
-| [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> |
+| Topics | Exercises | Circuit |
+| --- | --- | --- |
+| [I. What is Arduino?](#i-what-is-Arduino) | - | - |
+| [II. What can Arduinos do?](#ii-what-can-Arduino-do) | - | - |
+| [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED |
 
 
 ## I. What is Arduino?
@@ -22,7 +22,9 @@ From the [Arduino website](https://www.arduino.cc/):
 ## III. Blink LED
 Let's begin by opening and uploading an example file that makes an LED blink: **File > Examples > Basics > Blink**.  Plug the long leg of the LED (the positive leg) into pin 13 and the short leg into ground:
 
-![alt text](../images/ledpin13.jpg)
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> | ![alt text](../images/ledpin13.jpg) |
 
 #### Comments
 
