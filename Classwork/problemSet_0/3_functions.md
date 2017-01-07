@@ -1,9 +1,13 @@
-# Functions
+## TODO link to RGB circuit
+## maybe which circuits going to use in the chapter?
+
+# 3. Functions
 
 Topics
 * [I. Defining Functions](#i-defining-functions)
-* [II. Arguments](#ii-arguments)
-* [III. Returning Values](#iii-returning-values)
+* [II. Parameters and Arguments](#ii-parameters-and-arguments)
+* [III. Multiple Arguments](#iii-multiple-arguments)
+* [IV. Returning Values](#iv-returning-values)
 
 Exercises
 * [Exercise 0](#ex0)
@@ -16,33 +20,37 @@ Exercises
 
 Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own.
 
-We're going to continue using the [RGB LED circuit](#ii-rgb-leds) from the previous chapter. Let's write a function, **goGreenies()**, that sets the LED to green.
+We're going to continue using the [RGB LED circuit](#ii-rgb-leds) from the previous chapter. Let's write a function, **greenLight()**, that sets the LED to green.
 
-1. We begin by **declaring our own function, "void goGreenies() {"**:
+1. We begin by **declaring our own function, "void greenLight() {"**:
 
 2. Next we **call our function** using the function name followed by parentheses. The function will not be called by default; we have to call it in the setup() or loop():
 
 ```c++
-int ledPin = 9;
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  // pinMode for each LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-    blinky();      // calling function here
+  greenLight();
 }
 
-// function definition here
-void blinky() {
-    digitalWrite(ledPin, HIGH);   
-    delay(1000);                  
-    digitalWrite(ledPin, LOW);    
-    delay(1000);                  
+void greenLight() {
+  // makes the color green
+  analogWrite(redPin, 0);
+  analogWrite(greenPin, 255);
+  analogWrite(bluePin, 0);  
 }
 ```
 
-#### Why functions?
+**NOTE: Why functions?**
 Functions make our code easier to read and helps to avoid code repetition.
 
 ---
@@ -50,119 +58,158 @@ Functions make our code easier to read and helps to avoid code repetition.
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-1. Using the code you wrote in Exercise 1, create a function, <b>lightStep()</b>,
-that lights up an LED in steps of increasing brightness.
+1. Using the RGB LED circuit, write a function, <b>whiteLight()</b> that makes the LED white.
 
-2. Alternate between delaying 1 second and 1/2 second between calling lightStep().
+2. Alternate between green and white light in the loop.
 </pre>
 
-
 ```c++
-int ledPin = 9;
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  // pinMode for each LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-  // calling function here
+  // call functions here
 }
 
-// declare your function here
+void greenLight() {
+  // makes the color green
+  analogWrite(redPin, 0);
+  analogWrite(greenPin, 255);
+  analogWrite(bluePin, 0);  
+}
+
+// declare whiteLight() here
+
 ```
 
 ---
 
-## II. Arguments
-Passing arguments to functions allows us reuse the code of a function but pass in different values. As an example, instead of delaying 1 second every time we call blink(), let's pass an argument to blink() so that we can set the delay to any arbitrary value.
+## II. Parameters and Arguments
+Parameters in functions allows us reuse the code of a function but pass in different values.
 
-**Step 1:** When we declare the function, we include *parameters* inside of the parentheses of the function header. A parameter tells our function what *type* of data the function should expect. Inside of our function definition we refer to the parameter:
-
-**Step 2:** When we call our function, we pass an *argument* - in this case, a number representing the delay time.
+For example, let's write a function, **goGreenies()**, that flashes between white and green light. The function has a parameter - flashTime - that determines how fast the colors flash.
 
 ```c++
-int ledPin = 9;
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  // pinMode for each LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-  // call blink with arguments
-
-  blinky(500);     // 500 is an argument
-  blinky(800);     // 800 is an argument
-  blinky(200);     // 200 is an argument
+  goGreenies(100);
+  goGreenies(500);
+  goGreenies(1000);
 }
 
-// delayTime is a parameter
-void blinky(int delayTime) {
-    digitalWrite(ledPin, HIGH);   
-    delay(delayTime);                  
-    digitalWrite(ledPin, LOW);    
-    delay(delayTime);                                 
+void goGreenies(int flashTime) {  // one parameter = flashTime
+  greenLight();
+  delay(flashTime);
+  whiteLight();
+  delay(flashTime);
 }
+
+// greenLight() goes here
+// defined in previous exercise
+
+// whiteLight() goes here
+// declared in previous exercise
 ```
+
+**Step 1:** When we declare the function, we include *parameters* inside of the parentheses of the function header. A parameter tells our function what *type* of data the function should expect. Inside of our function definition we refer to the parameter.
+
+  **NOTE**: In the previous example, *flashTime is the parameter*.
+
+**Step 2:** When we call our function, we pass an *argument* - in this case, a number representing the delay time.
+
+  **NOTE**: In the previous example, *100, 500, and 1000 are the arguments* passed to goGreenies().
 
 NOTE:
 * A **parameter** is a variable in a function definition.
 * An **argument** is the data you pass into the method's parameters.
 
 
-#### Multiple Arguments
+# III. Multiple Arguments
 
-To pass multiple arguments, we separate the parameters with commas. For example, to write a blinky() function that has a parameter for the first *and* second delay time:
+To pass multiple arguments, we separate the parameters with commas.
+
+As an example, let's write a function, **setLedColor()**, for the RGB LED that has three parameters- one for the red value, green value, and blue value of the LED. Then the function sets the LED colors according to the arguments passed to the function.
 
 ```c++
-int ledPin = 9;
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  // pinMode for each LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-  blinky(500, 1000);     // pass two arguments
+  setColor(0, 0, 255);  // blue
 }
 
-// delayTime is a parameter
-void blinky(int delayTime1, int delayTime2) {
-    digitalWrite(ledPin, HIGH);   
-    delay(delayTime1);                  
-    digitalWrite(ledPin, LOW);    
-    delay(delayTime2);                                 
+// declare function with multiple parameters
+void setLedColor(int redC, int greenC, int blueC) {
+  analogWrite(redPin, redC);
+  analogWrite(greenPin, greenC);
+  analogWrite(bluePin, blueC);  
 }
 ```
+
 ---
 
 <a name="ex1"></a>
 <pre>
 <b>Exercise 1:</b>
-Write a function <b>setBrightness()</b> that takes two arguments:
+Write a function <b>stopLight()</b> that cycles through the stop light colors.
+The function takes three arguments:
 
-1. The first is an integer between 0 and 255.
-It sets the LED to a level of brightness between 255 (max on) to 0 (off).
+1. delay of the green light
+2. delay of the yellow light
+3. delay of red light
 
-2. The second integer sets the amount of time the LED delays at that brightness.
-
-Call your function several times in the loop() with various values for brightness and delay.
+Call your function several times in the loop() with various delay values.
 </pre>
 
 ```c++
-int ledPin = 9;
+// Exercise 1 - Stop light
+
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  // pinMode for each LED
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-  // call your function
+  // call your function here
+
 }
 
-// define setBrightness() here
+// declare stopLight() here
 ```
 
-
-## III. Returning Values
+## IV. Returning Values
 
 So far we've only looked at functions that are "void." These functions execute code, but they do not *return* values. Now we're going to look at functions that do a calculation and *return* a value.
 
@@ -177,25 +224,35 @@ int sum(int a, int b) {
 **Step 2.** When we call sum(), we can set a variable equal to the function sum() because it returns a value:
 
 ```c++
-int ledPin = 9;
+// Example - sum() returns values
+
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
+  int redVal = sum(10, 40);         // = 50
+  int greenVal = sum(redVal, 50);   // = 100
 
-  int s1 = sum(500, 500);
-  int s2 = sum(250, 250);
-
-  digitalWrite(ledPin, HIGH);
-  delay(s1);
-  digitalWrite(ledPin, LOW);
-  delay(s2);
+  // equivalent to setLedColor(50, 100, 150);
+  setLedColor(redVal, blueVal, sum(50, greenVal));
 }
 
+// Sum returns an integer
 int sum(int a, int b) {
   return a + b;
+}
+
+void setLedColor(int redC, int greenC, int blueC) {
+  analogWrite(redPin, redC);
+  analogWrite(greenPin, greenC);
+  analogWrite(bluePin, blueC);  
 }
 ```
 
@@ -209,18 +266,21 @@ int sum(int a, int b) {
 </pre>
 
 ```c++
-int ledPin = 9;
+// Example - sum() returns values
+
+int redPin = 11;
+int greenPin = 10;
+int bluePin = 9;
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
 }
 
 void loop() {
-
-  digitalWrite(ledPin, HIGH);
-  delay(square(10, 10));
-  digitalWrite(ledPin, LOW);
-  delay(square(20, 20));
+  float f1 = square(10);
+  float f2 = square(5.5);
 }
 
 // square function goes here

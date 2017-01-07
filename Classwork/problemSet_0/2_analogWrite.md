@@ -118,6 +118,7 @@ void loop() {
   analogWrite(bluePin, 0);  
 }
 ```
+
 ---
 
 <a name="ex2"></a>

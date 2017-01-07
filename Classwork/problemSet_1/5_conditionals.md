@@ -9,6 +9,7 @@ Topics
 Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
+
 ---
 
 ## I. if / else
