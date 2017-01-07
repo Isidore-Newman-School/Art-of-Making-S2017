@@ -1,31 +1,13 @@
 # 4. analogRead()
 
-### Chapter Overview
+## 0. Overview
 
-#### Topics
-* [I. Serial Monitor](#i-serial-monitor)
-* [II. Analog Input Pins](#ii-analog-input-pins)
-* [III. Strings](#iii-strings)
-* [IV. Light Sensor](#iv-light-sensor)
-
-#### Exercises
-* [Exercise 0](#ex0)
-* [Exercise 1](#ex1)
-* [Exercise 2](#ex2)
-* [Exercise 3](#ex3)
-
-#### Circuits and Materials
-
-In section IV we will be using a photoresistor / light sensor circuit. We'll need:
-  * 10KΩ resistor
-  * photoresistor (light sensor)
-  * LED
-  * 3 jumper wires
-  * breadboard
-
-  ![alt text](http://s4a.cat/examples/photoresistor_led.png)
-
----
+|  | Topics | Exercises | Circuit |
+| --- | --- | --- | --- |
+| I | [Serial Monitor](#i-serial-monitor) | [Exercise 0](#ex0) | - |
+| II | [Analog Input Pins](#ii-analog-input-pins)| [Exercise 1](#ex1) | - |
+| III | [Strings](#iii-strings)| [Exercise 2](#ex2) | - |
+| IV | [Light Sensor](#iv-light-sensor) | [Exercise 3](#ex3) | light sensor |
 
 ## I. Serial Monitor
 In this section we're going to be *reading* the value of sensors. But before we do, we need some way to get values off of the Arduino and onto our computer to make sure our sensors are working. This is where the Serial Monitor comes in! Add the following line of code to your setup():
@@ -122,7 +104,11 @@ We're going to use a new function, [analogRead()](https://www.arduino.cc/en/Refe
 ## IV. Light Sensor
 Now we're going to read the value of a photoresistor (or light sensor). Begin by setting up the following circuit:
 
-![alt text](http://s4a.cat/examples/photoresistor_led.png)
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| RGB LED | <ul><li>photoresistor (light sensor)</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](http://s4a.cat/examples/photoresistor_led.png)
+ |
+
 
 In the code below, make note of a few things:
 * We're using an *analog input pin* on the Arduino to read the sensor

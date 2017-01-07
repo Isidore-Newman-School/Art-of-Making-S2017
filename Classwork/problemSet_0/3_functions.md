@@ -9,15 +9,15 @@
 | III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 1](#ex1) | RGB LED |
 | IV | [Returning Values](#iv-returning-values)| [Exercise 2](#ex2) | RGB LED |
 
-| Circuit | Materials |
-| --- | --- |
-| RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
-
 ## I. Defining Functions
 
-Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own.
+Arduino comes with many built-in functions that you can explore in the [reference](https://www.arduino.cc/en/Reference/). In addition to using these functions, we can also write our own. We're going to continue using the RGB LED circuit from the previous chapter.
 
-We're going to continue using the RGB LED circuit from the previous chapter. Let's write a function, **greenLight()**, that sets the LED to green.
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> | ![alt text](../images/rgb.jpg) |
+
+Let's write a function, **greenLight()**, that sets the LED to green.
 
 1. We begin by **declaring our own function, "void greenLight() {"**:
 

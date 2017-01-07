@@ -7,10 +7,6 @@
 | I | [Defining Functions](#i-builtin-functions) | [Exercise 0](#ex0) <br/> [Exercise 1](#ex1) | LED resistor |
 | II | [RGB LEDs](#ii-rgb-leds)| [Exercise 2](#ex2) | RGB LED |
 
-| Circuit | Materials | Diagram |
-| --- | --- | --- |
-| LED resistor | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](../images/arduinores.jpg) |
-| RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> | ![alt text](../images/rgb.jpg) |
 
 ## I. Built-in Functions
 
@@ -32,7 +28,24 @@ We're going to look at another built-in function: **analogWrite()**. Like digita
 analogWrite(pin, value);
 ```
 
-The following example turns the LED to half brightness:
+---
+
+<a name="ex0"></a>
+<pre>
+<b>Exercise 0:</b>
+Only ~ pins (pulse width modulation pins) can use the function analogWrite().
+Which pins can do analog writes?
+</pre>
+
+---
+
+Let's use analogWrite() in an example to turn an LED to half brightness. Setup the following circuit:
+
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| LED resistor | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text](../images/arduinores.jpg) |
+
+Here's the code:
 
 ```c++
 int ledPin = 9; // 9 is a pin with a ~
@@ -48,22 +61,10 @@ void loop() {
 
 ---
 
-<a name="ex0"></a>
-<pre>
-<b>Exercise 0:</b>
-Only ~ pins (pulse width modulation pins) can use the function analogWrite().
-Which pins can do analog writes?
-</pre>
-
 <a name="ex1"></a>
 <pre>
 <b>Exercise 1:</b>
-Pin 13 is the only pin with a built-in resistor. If we use any other pin
-to power LEDs (which we'll have to if we're doing to do an analogWrite()),
-we have to use a breadboard and a resistor. The resistor limits current
-and prevents the LED from burning out.
-
-1. Set up the circuit below.
+1. Use the circuit in the previous example.
 
 2. Make the LED:
     1) start off
@@ -72,8 +73,6 @@ and prevents the LED from burning out.
     4) full brightness
     5) repeat!
 </pre>
-
-![alt text](../images/arduinores.jpg)
 
 ```c++
 int ledPin = 9;
@@ -95,7 +94,9 @@ RGB LEDs are LEDs with a red, green, and blue diode. Together, these diodes can 
 
 Begin by setting up the following circuit:
 
-![alt text](../images/rgb.jpg)
+| Circuit | Materials | Diagram |
+| --- | --- | --- |
+| RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> | ![alt text](../images/rgb.jpg) |
 
 ```c++
 int redPin = 11;
