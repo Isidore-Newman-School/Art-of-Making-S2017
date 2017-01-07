@@ -89,6 +89,8 @@ void loop() {
 }
 ```
 
+---
+
 ## II. RGB LEDs
 RGB LEDs are LEDs with a red, green, and blue diode. Together, these diodes can produce any color of the rainbow! We treat RGB LEDs as if they were three separate LEDs and we program them individually.
 
