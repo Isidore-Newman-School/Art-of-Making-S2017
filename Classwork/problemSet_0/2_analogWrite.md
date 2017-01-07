@@ -1,35 +1,12 @@
 # 2. analogWrite()
 
-### Chapter Overview
+## 0. Overview
 
-#### Topics
-* [I. Defining Functions](#i-builtin-functions)
-* [II. RGB LEDs](#ii-rgb-leds)
+| Topics | Exercises | Circuit | Materials |
+| --- | --- | --- | --- |
+| [I. Defining Functions](#i-builtin-functions) | [Exercise 0](#ex0) <br/> [Exercise 1](#ex1) | LED resistor | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> |
+| [II. RGB LEDs](#ii-rgb-leds)| [Exercise 2](#ex2) | RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
 
-#### Exercises
-* [Exercise 0](#ex0)
-* [Exercise 1](#ex1)
-* [Exercise 2](#ex2)
-
-#### Circuits and Materials
-
-1. In section I. of this chapter, we're going to use the LED circuit:
-  * 2 jumpers
-  * 220Ω resistor
-  * LED
-  * breadboard
-
-  ![alt text](../images/arduinores.jpg)
-
-2. In section II. of this chapter, we're going to use the RGB circuit:
-  * 4 jumpers
-  * 3, 220Ω resistor
-  * RGB LED
-  * breadboard
-
-  ![alt text](../images/rgb.jpg)
-
----
 
 ## I. Built-in Functions
 
