@@ -1,29 +1,14 @@
 # 3. Functions
 
-### Chapter Overview
+## 0. Overview
 
-#### Topics
-* [I. Defining Functions](#i-defining-functions)
-* [II. Parameters and Arguments](#ii-parameters-and-arguments)
-* [III. Multiple Arguments](#iii-multiple-arguments)
-* [IV. Returning Values](#iv-returning-values)
+|  | Topics | Exercises | Circuit | Materials |
+| --- | --- | --- | --- | --- |
+| I | [Defining Functions](#i-defining-functions) | [Exercise 0](#ex0) <br/> [Exercise 1](#ex1) | RGB LED | <ul><li>4 jumpers</li><li>3, 220Ω resistors</li><li>RGB LED</li><li>breadboard</li></ul> |
+| II | [Parameters and Arguments](#ii-parameters-and-arguments)| - | RGB LED | (see above) |
+| III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 1](#ex1) | RGB LED | (see above) |
+| IV | [Returning Values](#iv-returning-values)| [Exercise 2](#ex2) | RGB LED | (see above) |
 
-#### Exercises
-* [Exercise 0](#ex0)
-* [Exercise 1](#ex1)
-* [Exercise 2](#ex2)
-
-#### Circuits and Materials
-
-For this chapter, we'll be using the RGB circuit:
-  * 2 jumpers
-  * 220Ω resistor
-  * LED
-  * breadboard
-
-  ![alt text](../images/arduinores.jpg)
-
----
 
 ## I. Defining Functions
 
