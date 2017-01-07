@@ -2,8 +2,6 @@
 
 Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software). On Windows select **"Windows Installer."**
 
----
-
 ### Topics
 * [I. What is Arduino?](#i-what-is-Arduino)
 * [II. What can Arduinos do?](#ii-what-can-Arduino-do)
