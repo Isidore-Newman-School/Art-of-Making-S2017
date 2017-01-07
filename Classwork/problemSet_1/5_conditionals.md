@@ -1,18 +1,18 @@
 # 5. Conditionals
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. if / else](#i-if--else)
 * [II. if / else if / else](#ii-if--else-if--else)
 * [III. Night Light](#iii-night-light)
 * [IV. Booleans](#iv-booleans)
 
-Exercises
+#### Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 
----
-
-## Circuits and Materials
+#### Circuits and Materials
 
 In section III and IV we will be using a photoresistor / light sensor circuit. We'll need:
   * 10KΩ resistor

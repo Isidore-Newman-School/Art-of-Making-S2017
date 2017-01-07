@@ -1,17 +1,17 @@
 # 2. analogWrite()
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. Defining Functions](#i-builtin-functions)
 * [II. RGB LEDs](#ii-rgb-leds)
 
-Exercises
+#### Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 * [Exercise 2](#ex2)
 
----
-
-## Circuits and Materials
+#### Circuits and Materials
 
 1. In section I. of this chapter, we're going to use the LED circuit:
   * 2 jumpers
@@ -28,7 +28,7 @@ Exercises
   * breadboard
 
   ![alt text](../images/rgb.jpg)
-  
+
 ---
 
 ## I. Built-in Functions

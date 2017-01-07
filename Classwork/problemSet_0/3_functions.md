@@ -1,19 +1,19 @@
 # 3. Functions
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. Defining Functions](#i-defining-functions)
 * [II. Parameters and Arguments](#ii-parameters-and-arguments)
 * [III. Multiple Arguments](#iii-multiple-arguments)
 * [IV. Returning Values](#iv-returning-values)
 
-Exercises
+#### Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 * [Exercise 2](#ex2)
 
----
-
-## Circuits and Materials
+#### Circuits and Materials
 
 For this chapter, we'll be using the RGB circuit:
   * 2 jumpers

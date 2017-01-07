@@ -1,18 +1,18 @@
 # 6. digitalRead()
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. Pushbutton](#i-pushbutton)
 * [II. Latching Button](#ii-latching-button)
 
-Exercises
+#### Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 
----
+#### Circuits and Materials
 
-## Circuits and Materials
-
-In this chapter we will be using the pushbutton circuit. We'll need:
+* In this chapter we will be using the pushbutton circuit. We'll need:
   * 10KΩ resistor
   * pushbutton
   * LED

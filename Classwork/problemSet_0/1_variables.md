@@ -2,18 +2,18 @@
 
 # 1. Variables
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. Our first variable](#i-what-is-Arduino)
 * [II. Arithmetic with variables](#ii-arithmetic-with-variables)
 * [III. Data Types](#iii-data-types)
 * [IV. Operators](#iv-operators)
 
-Exercises
+#### Exercises
 * [Exercise 0. Blink Speed](#ex0)
 
----
-
-## Circuits and Materials
+#### Circuits and Materials
 
 1. For blinking the LED, we will need:
   * Arduino

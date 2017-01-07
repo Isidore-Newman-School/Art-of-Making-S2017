@@ -1,20 +1,20 @@
 # 4. analogRead()
 
-Topics
+### Chapter Overview
+
+#### Topics
 * [I. Serial Monitor](#i-serial-monitor)
 * [II. Analog Input Pins](#ii-analog-input-pins)
 * [III. Strings](#iii-strings)
 * [IV. Light Sensor](#iv-light-sensor)
 
-Exercises
+#### Exercises
 * [Exercise 0](#ex0)
 * [Exercise 1](#ex1)
 * [Exercise 2](#ex2)
 * [Exercise 3](#ex3)
 
----
-
-## Circuits and Materials
+#### Circuits and Materials
 
 In section IV we will be using a photoresistor / light sensor circuit. We'll need:
   * 10KΩ resistor
