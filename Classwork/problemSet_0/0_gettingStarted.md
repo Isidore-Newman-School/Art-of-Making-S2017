@@ -1,12 +1,13 @@
 # 0. Getting Started
 
+## Overview
+
 | Topics | Exercises | Circuit | Materials |
 | --- | --- | --- | --- |
 | [I. What is Arduino?](#i-what-is-Arduino) | - | - |
 | [II. What can Arduinos do?](#ii-what-can-Arduino-do) | - | - |
 | [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> |
 
----
 
 ## I. What is Arduino?
 
