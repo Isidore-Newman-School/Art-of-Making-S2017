@@ -107,12 +107,14 @@ void setup() {
 }
 
 void loop() {
+  // call function with argument
   goGreenies(100);
   goGreenies(500);
   goGreenies(1000);
 }
 
-void goGreenies(int flashTime) {  // one parameter = flashTime
+// declare function with parameter
+void goGreenies(int flashTime) {  
   greenLight();
   delay(flashTime);
   whiteLight();
@@ -126,18 +128,11 @@ void goGreenies(int flashTime) {  // one parameter = flashTime
 // declared in previous exercise
 ```
 
-**Step 1:** When we declare the function, we include *parameters* inside of the parentheses of the function header. A parameter tells our function what *type* of data the function should expect. Inside of our function definition we refer to the parameter.
-
-  **NOTE**: In the previous example, *flashTime is the parameter*.
-
-**Step 2:** When we call our function, we pass an *argument* - in this case, a number representing the delay time.
-
-  **NOTE**: In the previous example, *100, 500, and 1000 are the arguments* passed to goGreenies().
-
-NOTE:
+#### Recap
 * A **parameter** is a variable in a function definition.
+  * *flashTime is the parameter* in the previous example.
 * An **argument** is the data you pass into the method's parameters.
-
+  * *100, 500, and 1000 are the arguments* in the previous example
 
 ## III. Multiple Arguments
 
