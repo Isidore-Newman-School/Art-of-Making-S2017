@@ -1,25 +1,10 @@
 # 0. Getting Started
 
-### Chapter Overview
-
 | Topics | Exercises | Circuit | Materials |
 | --- | --- | --- | --- |
 | [I. What is Arduino?](#i-what-is-Arduino) | | |
 | [II. What can Arduinos do?](#ii-what-can-Arduino-do) | | |
 | [III. Blink LED](#iii-blink-led) | [Exercise 0](#ex0) | Blinking LED | <ul><li>Arduino</li><li>USB cord</li><li>LED</li></ul> |
-
-
-#### Circuits and Materials
-
-1. For blinking the LED, we will need:
-  * Arduino software
-    * Begin by [downloading the Arduino program](https://www.arduino.cc/en/main/software).
-    * On Windows select **"Windows Installer."**
-  * Arduino
-  * USB
-  * LED
-
-  ![alt text](../images/ledpin13.jpg)
 
 ---
 
