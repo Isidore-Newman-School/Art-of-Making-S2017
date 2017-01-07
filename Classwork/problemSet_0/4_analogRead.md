@@ -47,7 +47,7 @@ Experiment with Serial.print() and Serial.println(). What is the difference
 between these functions?
 </pre>
 
-![alt text](serialmon.jpg)
+![alt text](../images/serialmon.jpg)
 
 ---
 

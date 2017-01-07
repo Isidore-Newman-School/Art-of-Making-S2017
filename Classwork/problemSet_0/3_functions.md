@@ -218,7 +218,9 @@ int sum(int a, int b) {
 **Step 2.** When we call sum(), we can set a variable equal to the function sum() because it returns a value:
 
 ```c++
-// Example - sum() returns values
+/*
+  * Example - sum() returns values
+*/
 
 int redPin = 11;
 int greenPin = 10;
@@ -260,8 +262,9 @@ void setLedColor(int redC, int greenC, int blueC) {
 </pre>
 
 ```c++
-// Example - sum() returns values
-
+/*
+  * Exercise 2 - square()
+*/
 int redPin = 11;
 int greenPin = 10;
 int bluePin = 9;
