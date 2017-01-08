@@ -14,7 +14,7 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| potentiometer + LED | <ul><li>~8 jumpers</li><li>2, 10KΩ resistors</li><li>LED</li><li>2 pushbuttons</li><li>breadboard</li></ul> | ![alt text](../images/pot_bright.png) |
+| pot & LED | <ul><li>~6 jumpers</li><li>220Ω resistors</li><li>LED</li><li>10KΩ pot</li><li>breadboard</li></ul> | ![alt text](../images/pot_bright.png) |
 
 Fill out the following function, **checkPot()** so that if:
 * pot reading is less than or equal to 900, set the LED brightness to the appropriate scale.
