@@ -1,4 +1,5 @@
-loops
+To be completed...
+<!-- loops
 
 **(1)** In computer science the "%" (a.k.a. the modulo operator) is surprisingly useful. It is used to calculate the remainder after dividing two numbers. E.g.:
 
@@ -27,4 +28,4 @@ void loop() {
 void fizzBuzz() {
 
 }
-```
+``` -->

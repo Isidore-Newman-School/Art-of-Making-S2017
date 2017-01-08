@@ -95,6 +95,11 @@ Parameters in functions allows us reuse the code of a function but pass in diffe
 For example, let's write a function, **goGreenies()**, that flashes between white and green light. The function has a parameter - flashTime - that determines how fast the colors flash.
 
 ```c++
+/*
+ * Example of function arguments/parameters
+ * goGreenies()
+*/
+
 int redPin = 11;
 int greenPin = 10;
 int bluePin = 9;
@@ -141,6 +146,11 @@ To pass multiple arguments, we separate the parameters with commas.
 As an example, let's write a function, **setLedColor()**, for the RGB LED that has three parameters- one for the red value, green value, and blue value of the LED. Then the function sets the LED colors according to the arguments passed to the function.
 
 ```c++
+/*
+ * Example of multiple function arguments/parameters
+ * setLedColor()
+*/
+
 int redPin = 11;
 int greenPin = 10;
 int bluePin = 9;
@@ -180,7 +190,10 @@ Call your function several times in the loop() with various delay values.
 </pre>
 
 ```c++
-// Exercise 1 - Stop light
+/*
+ * Exercise of multiple function parameters/ arguments
+ * stopLight()
+*/
 
 int redPin = 11;
 int greenPin = 10;
@@ -219,7 +232,8 @@ int sum(int a, int b) {
 
 ```c++
 /*
-  * Example - sum() returns values
+  * Example of returning values
+  * sum()
 */
 
 int redPin = 11;
@@ -263,7 +277,8 @@ void setLedColor(int redC, int greenC, int blueC) {
 
 ```c++
 /*
-  * Exercise 2 - square()
+  * Exercise of returning values
+  * square()
 */
 int redPin = 11;
 int greenPin = 10;
