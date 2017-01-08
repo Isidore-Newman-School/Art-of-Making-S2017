@@ -16,11 +16,10 @@ Problem sets should be completed **individually**, but *if you have questions, d
 | --- | --- | --- |
 | pot & LED | <ul><li>~6 jumpers</li><li>220Ω resistor</li><li>LED</li><li>10KΩ pot</li><li>breadboard</li></ul> | ![alt text](../images/pot_bright.png) |
 
-Fill out the following function, **checkPot()** so that if:
-* pot reading is less than or equal to 900, set the LED brightness to the appropriate scale.
-  * remember, the max val of analogWrite() is 255
+Fill out the following function, **checkPot()** so that:
+* if pot reading is less than or equal to 900, set the LED brightness to the a value between 0-255.
   * Hint: check out the [map() function](https://www.arduino.cc/en/Reference/Map)
-* pot is over 900, blink the LED.
+* if pot is over 900, blink the LED.
 
 ```c++
 int ledPin = 9;
