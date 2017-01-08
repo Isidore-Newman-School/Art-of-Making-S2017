@@ -7,11 +7,31 @@ You can comment/ uncomment certain sections to test code by highlighting the are
 ```c++
 
 /*
+ *************************
  * Exercise 0
+ * After 3 runs of the loop():
+ * x =
 
+ *********
+ * Fill out for partial credit:
+ *********
+
+   int x = 4;          
+
+   void setup() {
+     int y = x;         // y =
+     x = x * 4;         // x =
+     x += y;            // x =
+     x *= 1;            // x =
+   }
+
+   void loop() {
+     x++;              
+   }
 */
 
 /*
+ *************************
  * Exercise 1
 
  * (a)
@@ -22,7 +42,7 @@ You can comment/ uncomment certain sections to test code by highlighting the are
  * (f)
  * (g)
  * (h)
-
+ *************************
 */
 
 int redPin = 11;

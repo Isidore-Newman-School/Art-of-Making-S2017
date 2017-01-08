@@ -12,6 +12,36 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 ## Variables
 
+**(0)** What is the value of x after the loop() has run three times?
+
+Hint 0: Don't be afraid to ask for help!
+Hint 1: Look up the following [compound operators](https://www.arduino.cc/en/Reference/HomePage):
+
+* `++`
+* `+=`
+* `*=`
+
+Hint 2: **To get partial credit** put a comment next to each line of code with the value of x or y at that line.
+
+```c++
+/*
+ * problemSet_0
+ * Exercise 0
+*/
+int x = 4;
+
+void setup() {
+  int y = x;
+  x = x * 4;
+  x += y;
+  x *= 1;
+}
+
+void loop() {
+  x++;
+}
+```
+
 ## Built-in Functions
 
 **(1)** Fill out the following table:
