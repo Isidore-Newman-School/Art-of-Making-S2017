@@ -72,10 +72,10 @@ void loop() {
 <a name="ex1"></a>
 <pre>
 <b>Exercise 1:</b>
-1. Using a single variable, *delayTime*, make the LED blink like a heartbeat:
+1. Using a single variable, <b>delayTime</b>, make the LED blink like a heartbeat:
 short, long, short, long, etc.
 2. The first beat should delay as long as the variable delayTime.
-2. The second pulse should delay *twice as long* as the first, regardless of the
+2. The second pulse should delay <b>twice as long</b> as the first, regardless of the
 value of delayTime.
 </pre>
 
