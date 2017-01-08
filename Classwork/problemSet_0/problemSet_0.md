@@ -14,7 +14,7 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 **(0)** What is the value of x after the loop() has run three times?
 
-Hint 0: Don't be afraid to ask for help! 
+Hint 0: Don't be afraid to ask for help!  
 Hint 1: Look up the following [compound operators](https://www.arduino.cc/en/Reference/HomePage):
 
 * `++`
