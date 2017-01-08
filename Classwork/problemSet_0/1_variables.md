@@ -121,8 +121,8 @@ When we declare functions *at the top of a sketch, the variables are global* and
 1. In the following example, which variable(s) are global? Local?
 
 2. Refer to the code below and choose the correction option:
-  1. only `delay(y)` is correct
-  2. only `delay(x)` and `delay(y)` are correct
+  1. only <b>delay(y)</b> is correct
+  2. only <b>delay(x)</b> and <b>delay(y)</b> are correct
   3. all delays work  
 </pre>
 
