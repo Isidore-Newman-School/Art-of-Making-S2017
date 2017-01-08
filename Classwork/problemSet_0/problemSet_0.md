@@ -3,6 +3,7 @@
 Problem sets should be completed **individually**, but *if you have questions, don't hesitate to ask* for help. Problems sets are meant to cement your understanding of Arduino concepts.
 
 **BEFORE BEGINNING ASSIGNMENT**
+
 1. Copy the code [in this template](../templates/ps0_template.md) into a new Arduino project.
 2. Put all problem set answers into this Arduino sketch
 3. *To submit assignment*, email this file to Ms. deBB
