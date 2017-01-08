@@ -39,7 +39,8 @@ void loop() {
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-Create a new variable, delayTime, at the top of your sketch. Use this variable in the blink sketch to control the delay time between turning on/off.
+Create a new variable, delayTime, at the top of your sketch. Use this variable
+in the blink sketch to control the delay time between turning on/off.
 </pre>
 
 ---
