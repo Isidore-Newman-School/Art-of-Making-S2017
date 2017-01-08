@@ -46,7 +46,7 @@ void loop() {
 Write a function <b>timer()</b> that takes an argument and keeps an LED
 on for the amount of time passed to the function.
 
-Call this function *when a button is pressed*.
+Call timer() <b>when a button is pressed</b>.
 </pre>
 
 ```c++
@@ -128,7 +128,8 @@ void loop() {
 <b>Exercise 1:</b>
 To cement your understanding of the latching button, fill out the table below.
 
-At what #s does the LED change state? Why is it necessary to save the oldState? The ledOn state?
+At what #s does the LED change state? Why is it necessary to save the oldState?
+The ledOn state?
 </pre>
 
 | # | status | oldState | newState | ledOn |

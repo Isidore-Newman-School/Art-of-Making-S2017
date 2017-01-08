@@ -21,7 +21,7 @@ Hint 1: Look up the following [compound operators](https://www.arduino.cc/en/Ref
 * `+=`
 * `*=`
 
-Hint 2: **To get partial credit** put a comment next to each line of code with the value of x or y at that line.
+Hint 2: **To get partial credit**, put a comment next to each line of code with the value of x or y at that line.
 
 ```c++
 /*
