@@ -10,11 +10,11 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 ---
 
-**0** Setup the circuit below with a potentiometer (a variable resistor / knob whose resistance increases/decreases as the knob turns).
+**(0)** Setup the circuit below with a potentiometer (a variable resistor / knob whose resistance increases/decreases as the knob turns).
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| pot & LED | <ul><li>~6 jumpers</li><li>220Ω resistors</li><li>LED</li><li>10KΩ pot</li><li>breadboard</li></ul> | ![alt text](../images/pot_bright.png) |
+| pot & LED | <ul><li>~6 jumpers</li><li>220Ω resistor</li><li>LED</li><li>10KΩ pot</li><li>breadboard</li></ul> | ![alt text](../images/pot_bright.png) |
 
 Fill out the following function, **checkPot()** so that if:
 * pot reading is less than or equal to 900, set the LED brightness to the appropriate scale.
