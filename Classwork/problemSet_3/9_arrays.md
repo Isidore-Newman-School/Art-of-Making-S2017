@@ -1,4 +1,6 @@
-Arrays are ways to a collection of variables.
+To be completed...
+
+<!-- Arrays are ways to a collection of variables.
 
 ### Declaring Arrays
 ```c++
@@ -200,4 +202,4 @@ To get a particular color of the rainbow, set the correct RGB values. Check out 
 
 **(3)** Open the example file StrandTest (File > Examples > Adafruit Neopixel > strandtest). What do each of the functions do?
 
-**(4)** Make the Neopixels fade in and out using a for loop and the setBrightness() function.
+**(4)** Make the Neopixels fade in and out using a for loop and the setBrightness() function. -->

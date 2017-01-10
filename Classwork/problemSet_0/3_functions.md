@@ -5,9 +5,9 @@
 |  | Topics | Exercises | Circuit |
 | --- | --- | --- | --- |
 | I | [Defining Functions](#i-defining-functions) | [Exercise 0](#ex0) | RGB LED |
-| II | [Parameters and Arguments](#ii-parameters-and-arguments)| - | RGB LED |
-| III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 1](#ex1) | RGB LED |
-| IV | [Returning Values](#iv-returning-values)| [Exercise 2](#ex2) | RGB LED |
+| II | [Parameters and Arguments](#ii-parameters-and-arguments)| [Exercise 1](#ex1) | RGB LED |
+| III | [Multiple Arguments](#iii-multiple-arguments)| [Exercise 2](#ex2) | RGB LED |
+| IV | [Returning Values](#iv-returning-values)| [Exercise 3](#ex3) | RGB LED |
 
 ## I. Defining Functions
 
@@ -133,6 +133,20 @@ void goGreenies(int flashTime) {
 // declared in previous exercise
 ```
 
+---
+
+<a name="ex1"></a>
+<pre>
+<b>Exercise 1:</b>
+Write a function <b>blueBrightness()</b> that has a single parameter- representing the brightness
+of the blue LED- and sets the RGB LED accordingly.
+
+Call your function several times in the loop() with increasing blue brightness values
+(and make sure to put delays in between).
+</pre>
+
+---
+
 #### Recap
 * A **parameter** is a variable in a function definition.
   * *flashTime is the parameter* in the previous example.
@@ -176,9 +190,9 @@ void setLedColor(int redC, int greenC, int blueC) {
 
 ---
 
-<a name="ex1"></a>
+<a name="ex2"></a>
 <pre>
-<b>Exercise 1:</b>
+<b>Exercise 2:</b>
 Write a function <b>stopLight()</b> that cycles through the stop light colors.
 The function takes three arguments:
 
@@ -268,9 +282,9 @@ void setLedColor(int redC, int greenC, int blueC) {
 
 ---
 
-<a name="ex2"></a>
+<a name="ex3"></a>
 <pre>
-<b>Exercise 2:</b>
+<b>Exercise 3:</b>
  Write a function, square(), that takes a single argument-
  <b>a float</b> and returns the square of that number- <b>also a float</b>.
 </pre>

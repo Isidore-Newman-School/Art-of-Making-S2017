@@ -4,8 +4,8 @@
 
 |  | Topics | Exercises | Circuit |
 | --- | --- | --- | --- |
-| I | [I. Pushbutton](#i-pushbutton) | [Exercise 0](#ex0) | pushbutton |
-| II | [II. Latching Button](#ii-latching-button) | [Exercise 1](#ex1) | pushbutton |
+| I | [Pushbutton](#i-pushbutton) | [Exercise 0](#ex0) | pushbutton |
+| II | [Latching Button](#ii-latching-button) | [Exercise 1](#ex1) | pushbutton |
 
 
 ## I. Pushbutton
