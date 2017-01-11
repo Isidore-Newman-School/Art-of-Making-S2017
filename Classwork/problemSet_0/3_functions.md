@@ -177,7 +177,7 @@ void setup() {
 }
 
 void loop() {
-  setColor(0, 0, 255);  // blue
+  setLedColor(0, 0, 255);  // blue
 }
 
 // declare function with multiple parameters
