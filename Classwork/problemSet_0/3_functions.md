@@ -265,7 +265,7 @@ void loop() {
   int greenVal = sum(redVal, 50);   // = 100
 
   // equivalent to setLedColor(50, 100, 150);
-  setLedColor(redVal, blueVal, sum(50, greenVal));
+  setLedColor(redVal, greenVal, sum(50, greenVal));
 }
 
 // Sum returns an integer
