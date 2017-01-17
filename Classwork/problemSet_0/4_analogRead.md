@@ -54,28 +54,40 @@ between these functions?
 ## II. Strings
 So far we've only looked at variables that are numbers- either integers of floats. We can also store text in variables (known as strings). String can be *concatenated* using the "+" operator.
 
+```c++
+void setup() {
+  // tell the Arduino at what speed to communicate with computer
+  Serial.begin(9600);
+}
+
+void loop() {
+  String a = "hello ";
+  String b = a + "world!";
+  String c = b + 123;
+
+  Serial.println(a);
+  Serial.println(b);
+  Serial.println(c);
+}
+```
+
+---
+
 <a name="ex1"></a>
 <pre>
 <b>Exercise 1:</b>
-What do the following lines of code print? What do you think is happening?
+The example below attempts to concatenate a string with a number and print with the result, but it doesn't compile. Read the <a href="https://www.arduino.cc/en/Tutorial/StringAdditionOperator"String concatenation page</a> to see if you can figure out why.
 </pre>
 
 ```c++
 void setup() {
   // tell the Arduino at what speed to communicate with computer
   Serial.begin(9600);
-
-  String a = "7" + "3" + 2 + 1 + phrase;
-  String b = 2 + 1 + "7" + "3" + phrase;
-  String c = "7" + "3" + (2 + 1) + phrase;
-
-  Serial.println(a);
-  Serial.println(b);
-  Serial.println(c);
 }
 
 void loop() {
-
+  String a = "hello " + "world!" + 123;
+  Serial.println(a);
 }
 ```
 

@@ -177,7 +177,7 @@ void setup() {
 }
 
 void loop() {
-  setColor(0, 0, 255);  // blue
+  setLedColor(0, 0, 255);  // blue
 }
 
 // declare function with multiple parameters
@@ -226,6 +226,13 @@ void loop() {
 }
 
 // declare stopLight() here
+
+
+void setLedColor(int redC, int greenC, int blueC) {
+  analogWrite(redPin, redC);
+  analogWrite(greenPin, greenC);
+  analogWrite(bluePin, blueC);  
+}
 ```
 
 ---
@@ -234,7 +241,7 @@ void loop() {
 
 So far we've only looked at functions that are "void." These functions execute code, but they do not *return* values. Now we're going to look at functions that do a calculation and *return* a value.
 
-**Step 1.** Declare your function *with the data type* that your function will return. For example, to declare the function sum() that takes two values and returns their sum (an integer):
+**Step 1.** Declare your function *with the data type* that your function will return. For example, to declare the function sum() that takes two values and returns their sum (an integer), we *start the function declaration with* `int`:
 
 ```c++
 int sum(int a, int b) {
@@ -261,11 +268,8 @@ void setup() {
 }
 
 void loop() {
-  int redVal = sum(10, 40);         // = 50
-  int greenVal = sum(redVal, 50);   // = 100
-
-  // equivalent to setLedColor(50, 100, 150);
-  setLedColor(redVal, blueVal, sum(50, greenVal));
+  int s1 = sum(10, 40);         // = 50
+  int s2 = sum(s1, 50);         // = 100
 }
 
 // Sum returns an integer
@@ -305,7 +309,7 @@ void setup() {
 }
 
 void loop() {
-  float f1 = square(10);
+  float f1 = square(10.6);
   float f2 = square(5.5);
 }
 
