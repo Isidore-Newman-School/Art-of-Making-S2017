@@ -268,8 +268,13 @@ void setup() {
 }
 
 void loop() {
-  int s1 = sum(10, 40);         // = 50
-  int s2 = sum(s1, 50);         // = 100
+  int delay1 = sum(250, 250);            // = 500
+  int delay2 = sum(delay1, delay1);      // = 1000
+
+  setLedColor(0, 255, 0);
+  delay(delay1);
+  setLedColor(0, 0, 0);
+  delay(delay2);
 }
 
 // Sum returns an integer

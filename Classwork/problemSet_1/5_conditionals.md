@@ -73,7 +73,8 @@ We're going to create a night light. Setup the following circuit:
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-To create a night light, the LED must come on when the light in the room goes dim. Fill out the missing code in the following code block in order to create the night light:
+To create a night light, the LED must come on when the light in the room goes dim. Fill out the missing
+code in the following code block in order to create the night light:
 </pre>
 
 ```c++

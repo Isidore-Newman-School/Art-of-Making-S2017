@@ -12,16 +12,13 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 ## Variables
 
-**(0)** What is the value of x after the loop() has run three times?
+**(0)** What is the value of x after the loop() has run three times? Put a comment next to each line of code with the value of x or y at that line.
 
-Hint 0: Don't be afraid to ask for help!  
-Hint 1: Look up the following [compound operators](https://www.arduino.cc/en/Reference/HomePage):
+Hint 0: Look up the following [compound operators](https://www.arduino.cc/en/Reference/HomePage):
 
 * `++`
 * `+=`
 * `*=`
-
-Hint 2: **To get partial credit**, put a comment next to each line of code with the value of x or y at that line.
 
 ```c++
 /*
@@ -56,6 +53,7 @@ void loop() {
 ## Arguments and Parameters
 
 **(2)** Setup the [RGB LED circuit](problemSet_0.md). Write a function, **siren()**, that alternates between red, blue, and off.
+
 1. the function has a parameter, an integer, representing the time the red light stays on.
 2. blue should stay on 500ms longer than red
 3. the off state should last half as long as red
@@ -89,6 +87,7 @@ void loop() {
 
 ## Returning Values
 **(3)** Write a function, **fahren2Celsius()**, that:
+
 1. has a parameter of data type *float* representing the temperature in Fahrenheit
 2. *returns* the temperature in Celsius
 

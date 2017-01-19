@@ -7,7 +7,7 @@
 | [I. Our first variable](#i-what-is-Arduino) | [Exercise 0](#ex0) | Blinking LED |
 | [II. Arithmetic with variables](#ii-arithmetic-with-variables) | [Exercise 1](#ex1) | - |
 | [III. Data Types](#iii-data-types) | - | - |
-| [IV. Operators](#iv-operators) | [Exercise 2](#ex2) | - |
+| [IV. Variable Scope](#iv-variable-scope) | [Exercise 2](#ex2) | - |
 
 
 ## I. Our first variable
