@@ -241,7 +241,14 @@ void setLedColor(int redC, int greenC, int blueC) {
 
 So far we've only looked at functions that are "void." These functions execute code, but they do not *return* values. Now we're going to look at functions that do a calculation and *return* a value.
 
-**Step 1.** Declare your function *with the data type* that your function will return. For example, to declare the function sum() that takes two values and returns their sum (an integer), we *start the function declaration with* `int`:
+**Step 1.** Begin your function declaration *with the data type* that your function will return. For example, to declare the function sum() returns the sum (an integer), we *start the function declaration with* `int`:
+
+```c++
+int sum(int a, int b) {
+  ...
+}
+```
+**Step 2.** Use *return* keyword when you have a value that you'd like the function to return.
 
 ```c++
 int sum(int a, int b) {
@@ -249,7 +256,7 @@ int sum(int a, int b) {
 }
 ```
 
-**Step 2.** When we call sum(), we can set a variable equal to the function sum() because it returns a value:
+**Step 3.** When we call sum(), we can set a variable equal to the function sum() because it returns a value:
 
 ```c++
 /*
