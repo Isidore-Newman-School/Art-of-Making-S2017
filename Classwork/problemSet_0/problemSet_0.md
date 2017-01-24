@@ -22,21 +22,24 @@ Hint 0: Look up the following [compound operators](https://www.arduino.cc/en/Ref
 
 ```c++
 /*
- * problemSet_0
+ *************************
  * Exercise 0
+ * Fill out comments below:
+ *********
+
+   int x = 4;          
+
+   void setup() {
+     int y = x;         // y =
+     x = x * 4;         // x =
+     x += y;            // x =
+     x *= 1;            // x =
+   }
+
+   void loop() {
+     x++;              // after 3 runs of loop, x = 
+   }
 */
-int x = 4;
-
-void setup() {
-  int y = x;
-  x = x * 4;
-  x += y;
-  x *= 1;
-}
-
-void loop() {
-  x++;
-}
 ```
 
 ## Built-in Functions
