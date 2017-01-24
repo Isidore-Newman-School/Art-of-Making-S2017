@@ -9,10 +9,6 @@ You can comment/ uncomment certain sections to test code by highlighting the are
 /*
  *************************
  * Exercise 0
- * After 3 runs of the loop():
- * x =
-
- *********
  * Fill out comments below:
  *********
 
@@ -26,7 +22,7 @@ You can comment/ uncomment certain sections to test code by highlighting the are
    }
 
    void loop() {
-     x++;              
+     x++;              // after 3 runs of loop, x = 
    }
 */
 
