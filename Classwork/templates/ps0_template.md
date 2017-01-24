@@ -13,7 +13,7 @@ You can comment/ uncomment certain sections to test code by highlighting the are
  * x =
 
  *********
- * Fill out for partial credit:
+ * Fill out comments below:
  *********
 
    int x = 4;          
