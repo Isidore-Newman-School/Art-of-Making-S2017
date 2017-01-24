@@ -30,7 +30,7 @@ void setup() {
   pinMode(piezoPin, INPUT);
 }
 
-void draw() {
+void loop() {
   checkPot();
 }
 
