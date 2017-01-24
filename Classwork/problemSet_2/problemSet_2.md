@@ -1,5 +1,4 @@
-To be completed...
-<!-- # Problem Set 1. conditionals
+# Problem Set 2. Loops and Neopixels
 
 Problem sets should be completed **individually**, but *if you have questions, don't hesitate to ask* for help. Problems sets are meant to cement your understanding of Arduino concepts.
 
@@ -11,31 +10,51 @@ Problem sets should be completed **individually**, but *if you have questions, d
 
 ---
 
-**(0)** Write a function, **setAllColor()**, that *uses a for loop* to turn all of the Neopixels in a strip to a particular color. The function has three parameters- one for red, green, and blue.
+**(0)** Write a function, **setColorWheel()**, that reads the value of a potentiometer (i.e. knob). The Neopixels start out red, but as the knob is turned, they become more and more green (and vice versa).
+
+HINT: Use the Wheel() function.
+HINT: Look up the [map()](https://www.arduino.cc/en/Reference/Map) function.
 
 ```c++
 #include <Adafruit_NeoPixel.h>
-#define BUTTON_PIN   2    
+#define POT_PIN   A0    
 #define PIXEL_PIN    6   
 #define PIXEL_COUNT  7
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
-  pinMode(BUTTON_PIN, INPUT);
+  pinMode(POT_PIN, INPUT);
   strip.begin();
   strip.show();
 }
 
 void loop() {
-  setAllColor(0, 255, 0);   // sets all the Neopixels green
-  setAllColor(0, 0, 255);   // sets all the Neopixels blue
+  setColorWheel();
 }
 
-void setAllColor() {
+void setColorWheel() {
   // your code here
 }
+
+// Adafruit - https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
 ```
+
+**(1)** Write a function, pulseNeopixels(), that uses for loops to pulse Neopixels
 
 **(1)** As long as (while) a button is pressed, set a variable to a random number between 0-255
 
@@ -68,7 +87,7 @@ void loop() {
 void fizzBuzz() {
 
 }
-``` -->
+```
 
 1) Use a for loop to stay on for an increasing number of seconds: 1 second, 2 seconds, 3 seconds, ... , 10 seconds.
 
@@ -127,9 +146,6 @@ void printRange(int start, int end) {
 
 }
 ```
-
-**(3)** Write a new function, **slowClap()** that uses a [for loop](https://www.arduino.cc/en/Reference/For) and the **onOff()** function. Each time through the loop the LED should should blink 3 times, and with each iteration the LED should blink noticeably faster. Do 10 iterations.
-
 
 
 

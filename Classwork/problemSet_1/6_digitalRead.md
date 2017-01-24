@@ -8,6 +8,60 @@
 | II | [Latching Button](#ii-latching-button) | [Exercise 1](#ex1) | pushbutton |
 
 
+## I. Booleans
+
+So far we've examined the following data types:
+* int - integers
+* float - floating point (decimal) numbers
+* String - text
+
+Booleans are another data type that store **true or false**. We'll use a boolean, ledOn, to control whether the LED should turn on or off.
+
+```c++
+boolean ledOn = true;
+
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  if (ledOn) {
+    digitalWrite(ledPin, HIGH);
+  }
+  else {
+    digitalWrite(ledPin, LOW);
+  }
+}
+
+void loop() {
+  // you can also just say, "if (ledBlinking) {"
+  if (ledBlinking == true) {
+    Serial.println("true!");
+  }
+  else {
+    Serial.println("false!");
+  }
+}
+```
+
+---
+
+<a name="ex0"></a>
+<pre>
+<b>Exercise 0:</b>
+Use the night light circuit and code.
+
+1. Add a boolean variable at the top of your sketch called "blinking"
+2. Add the following logic:
+  * If the night light is on and if blinking == true: blink the LED
+  * If the night light is on and if blinking == false: just turn LED on
+  * Otherwise, the night light / LED should be off
+</pre>
+
+---
+
 ## I. Pushbutton
 In this example, we're going to use [**digitalRead()**](https://www.arduino.cc/en/Reference/DigitalRead) to check whether a button is HIGH or LOW (i.e. on or off, 5 volts or 0 volts, true or false). Unlike analogRead(), digitalRead() doesn't return a range of values- it simply *returns* whether the pin is on or off.
 
