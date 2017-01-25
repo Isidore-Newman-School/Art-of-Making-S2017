@@ -34,16 +34,6 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
 }
-
-void loop() {
-  // you can also just say, "if (ledBlinking) {"
-  if (ledBlinking == true) {
-    Serial.println("true!");
-  }
-  else {
-    Serial.println("false!");
-  }
-}
 ```
 
 ---
