@@ -4,8 +4,9 @@
 
 |  | Topics | Exercises | Circuit |
 | --- | --- | --- | --- |
-| I | [Pushbutton](#i-pushbutton) | [Exercise 0](#ex0) | pushbutton |
-| II | [Latching Button](#ii-latching-button) | [Exercise 1](#ex1) | pushbutton |
+| I | [Booleans](#i-booleans) | [Exercise 0](#ex0) | - |
+| II | [Pushbutton](#ii-pushbutton) | [Exercise 1](#ex1) <br> [Exercise 2](#ex2) | pushbutton |
+| III | [Latching Button](#iii-latching-button) | [Exercise 3](#ex3) | pushbutton |
 
 
 ## I. Booleans
@@ -41,18 +42,35 @@ void loop() {
 <a name="ex0"></a>
 <pre>
 <b>Exercise 0:</b>
-Use the night light circuit and code.
+Using the code below, create another boolean, <b>blinking</b>, that is set to true. Use boolean operators
+and if / else if / else structure to set up the following conditions:
 
-1. Add a boolean variable at the top of your sketch called "blinking"
-2. Add the following logic:
-  * If the night light is on and if blinking == true: blink the LED
-  * If the night light is on and if blinking == false: just turn LED on
-  * Otherwise, the night light / LED should be off
+1. If ledOn is true and blinkingOn is true, LED is blinking at a normal pace.
+2. If ledOn is false and blinkingOn is true, led blinks once every 5 seconds.
+3. If ledOn is true and blinkingOn is false, led is on.
+3. If ledOn is false and blinkingOn is false, led is off.
+
+Try adjusting the values of your booleans to make sure the program responds as you expect it should.
 </pre>
+
+```c++
+boolean ledOn = true;
+// your boolean here
+
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // your conditional logic here
+}
+```
 
 ---
 
-## I. Pushbutton
+## II. Pushbutton
 In this example, we're going to use [**digitalRead()**](https://www.arduino.cc/en/Reference/DigitalRead) to check whether a button is HIGH or LOW (i.e. on or off, 5 volts or 0 volts, true or false). Unlike analogRead(), digitalRead() doesn't return a range of values- it simply *returns* whether the pin is on or off.
 
 Begin by setting up the circuit:
@@ -61,6 +79,7 @@ Begin by setting up the circuit:
 | --- | --- | --- |
 | pushbutton | <ul><li>pushbutton</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino switch](../images/switch_led.png) |
 
+**NOTE** the use of `boolean state` to store the value of whether the button is `HIGH` or `LOW` (true / false);
 
 ```c++
 int ledPin = 13;
@@ -84,13 +103,19 @@ void loop() {
 
 ---
 
-<a name="ex0"></a>
+<a name="ex1"></a>
 <pre>
-<b>Exercise 0:</b>
-Write a function <b>timer()</b> that takes an argument and keeps an LED
-on for the amount of time passed to the function.
+<b>Exercise 1:</b>
+1. Print the button state to the Serial Monitor. What values does it print when the button is pressed/
+released?
+2. What do you recognize about the values `true`, `HIGH`, and `1` vs. `false`, `LOW`, and `0`?
+</pre>
 
-Call timer() <b>when a button is pressed</b>.
+
+<a name="ex2"></a>
+<pre>
+<b>Exercise 2:</b>
+Make the LED blink when the button is pressed.
 </pre>
 
 ```c++
@@ -105,15 +130,13 @@ void setup() {
 void loop() {
     boolean state = digitalRead(buttonPin);
 
-    // if else statement here
+    // if / else statement here
 }
-
-// define timer() here
 ```
 
 ---
 
-## II. Latching Button
+## III. Latching Button
 
 Now the objective is to make a button that stays on when we first click it, and turns off when we click it again. In order to do so, we're going to need to:
 1. store the previous state of the button in order to detect if the button's state has changed.
@@ -139,17 +162,13 @@ void loop() {
 
     if (newState == HIGH && oldState == LOW) {
 
-      // button has been clicked!
+      // button has been clicked! Change LED state
 
       if (ledOn) {
-        // the LED was on, but button has been clicked, so
-        // let's turn it off.
-        ledOn = false;
+        ledOn = false;  // the LED was on, but button has been clicked, so let's turn it off.
       }
       else {
-        // LED was off, but the button has been clicked, so
-        // let's turn it on.
-        ledOn = true;
+        ledOn = true;   // LED was off, but the button has been clicked, so let's turn it on.
       }
     }
 
@@ -157,19 +176,24 @@ void loop() {
     // let's update the oldState to the current state
     oldState = newState;
 
-    // finally, let's set the LED
-    if (ledOn) {
-      digitalWrite(ledPin, HIGH);
-    }
-    else {
-      digitalWrite(ledPin, LOW);
-    }
+    setLED();
+}
+
+void setLED() {
+  if (ledOn) {
+    digitalWrite(ledPin, HIGH);
+  }
+  else {
+    digitalWrite(ledPin, LOW);
+  }
 }
 ```
 
-<a name="ex1"></a>
+---
+
+<a name="ex3"></a>
 <pre>
-<b>Exercise 1:</b>
+<b>Exercise 3:</b>
 To cement your understanding of the latching button, fill out the table below.
 
 At what #s does the LED change state? Why is it necessary to save the oldState?
