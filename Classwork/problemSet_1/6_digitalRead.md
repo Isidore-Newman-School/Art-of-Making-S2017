@@ -59,7 +59,7 @@ Begin by setting up the circuit:
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| pushbutton | <ul><li>pushbutton</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![alt text]![alt text](../images/switch_led.png) |
+| pushbutton | <ul><li>pushbutton</li><li>3 jumpers wires</li><li>10KΩ resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino switch](../images/switch_led.png) |
 
 
 ```c++
