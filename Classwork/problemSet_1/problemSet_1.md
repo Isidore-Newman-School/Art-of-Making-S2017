@@ -23,11 +23,11 @@ Fill out the following function, **checkPot()** so that:
 
 ```c++
 int ledPin = 9;
-int piezoPin = A0;
+int potPin = A0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
-  pinMode(piezoPin, INPUT);
+  pinMode(potPin, INPUT);
 }
 
 void loop() {
