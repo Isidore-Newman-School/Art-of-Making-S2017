@@ -28,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  if (ledOn) {
+  if (ledOn == true) {
     digitalWrite(ledPin, HIGH);
   }
   else {
