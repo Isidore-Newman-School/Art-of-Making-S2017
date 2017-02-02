@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 10; i++) {
-    System.println(i);
+    Serial.println(i);
   }
   delay(1000);
 }
@@ -60,7 +60,7 @@ Let's do something more interesting. Begin by setting up a circuit with an LED a
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| analogWrite() LED | <ul><li>3 jumpers</li><li>220Ω resistor</li><li>10KΩ resistor</li><li>LED</li><li>pushbutton</li><li>breadboard</li></ul> | ![arduino](../images/arduinores.jpg) |
+| analogWrite() LED | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino](../images/arduinores.jpg) |
 
 Let's use a for loop to make an LED fade:
 
