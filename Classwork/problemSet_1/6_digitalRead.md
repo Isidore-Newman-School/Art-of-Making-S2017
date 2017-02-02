@@ -108,7 +108,7 @@ void loop() {
 <b>Exercise 1:</b>
 1. Print the button state to the Serial Monitor. What values does it print when the button is pressed/
 released?
-2. What do you recognize about the values `true`, `HIGH`, and `1` vs. `false`, `LOW`, and `0`?
+2. What do you recognize about the values <em>true</em>, <em>HIGH</em>, and <em>1</em> vs. <em>false</em>, <em>LOW</em>, and <em>0</em>?
 </pre>
 
 
