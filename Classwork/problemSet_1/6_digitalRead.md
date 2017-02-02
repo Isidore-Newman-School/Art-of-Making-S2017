@@ -164,7 +164,7 @@ void loop() {
 
       // button has been clicked! Change LED state
 
-      if (ledOn) {
+      if (ledOn == true) {
         ledOn = false;  // the LED was on, but button has been clicked, so let's turn it off.
       }
       else {
