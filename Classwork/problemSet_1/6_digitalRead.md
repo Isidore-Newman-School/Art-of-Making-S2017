@@ -180,7 +180,7 @@ void loop() {
 }
 
 void setLED() {
-  if (ledOn) {
+  if (ledOn == true) {
     digitalWrite(ledPin, HIGH);
   }
   else {
