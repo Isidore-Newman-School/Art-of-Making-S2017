@@ -38,7 +38,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 10; i+=2) {
-    System.println(i);
+    Serial.println(i);
   }
   delay(1000);
 }
