@@ -202,7 +202,7 @@ The ledOn state?
 
 | # | status | oldState | newState | ledOn |
 | --- | ---- | ---- | ---- | ---- |
-| 1 | before button is pressed | false | LOW | false |
+| 1 | before button is pressed | LOW | LOW | false |
 | 2 | immediately when button pressed, 1st time |  |  |  |
 | 3 | button still held down |  | HIGH | true |
 | 4 | finger released 1st time | HIGH | LOW |  |
