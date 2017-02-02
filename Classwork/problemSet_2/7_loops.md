@@ -116,7 +116,7 @@ Let's use a while loop to pulse the LED (fade in and out) as long as a button is
 
 ```c++
 int ledPin = 9;
-int buttonPin = 2;
+int buttonPin = 7;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -145,10 +145,11 @@ void fadeIn() {
 <a name="ex2"></a>
 <pre>
 <b>Exercise 2:</b>
-1. How can we modify the code above to immediately turn off the LED when the finger is released, but preserve that brightness level and <em>resume</em> at that brightness when the button is re-pressed.
+1. How can we modify the code above to immediately turn off the LED when the finger is released, but 
+preserve that brightness level and <em>resume</em> at that brightness when the button is re-pressed.
 
-2. If the LED has faded in and out a total of 3 times, immediately turn off the LED, no matter whether the
-pushbutton is pressed or not.
+2. If the LED has faded in and out a total of 3 times, immediately turn off the LED, no matter whether 
+the pushbutton is pressed or not.
 
 Hint1: Nix the for loops. Create some global variables.
 Hint2: This is hard!
