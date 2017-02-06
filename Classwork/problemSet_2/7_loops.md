@@ -60,7 +60,7 @@ Let's do something more interesting. Begin by setting up a circuit with an LED a
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| analogWrite() LED | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino](../images/arduinores.jpg) |
+| analogWrite() LED | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino](http://s3.amazonaws.com/ardusat-app/images/files/000/000/458/original/8WireLEDPin9.png?1430241653) |
 
 Let's use a for loop to make an LED fade:
 
