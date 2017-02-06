@@ -124,7 +124,7 @@ void setup() {
 }
 
 void loop() {
-  while(digitalRead(buttonPin) == HIGH)) {
+  while(digitalRead(buttonPin) == HIGH) {
     fadeIn();
     fadeOut();
   }
