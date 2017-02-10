@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 10; i++) {
-    System.println(i);
+    Serial.println(i);
   }
   delay(1000);
 }
@@ -38,7 +38,7 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < 10; i+=2) {
-    System.println(i);
+    Serial.println(i);
   }
   delay(1000);
 }
@@ -60,7 +60,7 @@ Let's do something more interesting. Begin by setting up a circuit with an LED a
 
 | Circuit | Materials | Diagram |
 | --- | --- | --- |
-| analogWrite() LED | <ul><li>3 jumpers</li><li>220Ω resistor</li><li>10KΩ resistor</li><li>LED</li><li>pushbutton</li><li>breadboard</li></ul> | ![arduino](../images/arduinores.jpg) |
+| analogWrite() LED | <ul><li>2 jumpers</li><li>220Ω resistor</li><li>LED</li><li>breadboard</li></ul> | ![arduino](http://s3.amazonaws.com/ardusat-app/images/files/000/000/458/original/8WireLEDPin9.png?1430241653) |
 
 Let's use a for loop to make an LED fade:
 
@@ -116,7 +116,7 @@ Let's use a while loop to pulse the LED (fade in and out) as long as a button is
 
 ```c++
 int ledPin = 9;
-int buttonPin = 2;
+int buttonPin = 7;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -124,7 +124,7 @@ void setup() {
 }
 
 void loop() {
-  while(digitalRead(buttonPin == HIGH)) {
+  while(digitalRead(buttonPin) == HIGH) {
     fadeIn();
     fadeOut();
   }
@@ -145,10 +145,11 @@ void fadeIn() {
 <a name="ex2"></a>
 <pre>
 <b>Exercise 2:</b>
-1. How can we modify the code above to immediately turn off the LED when the finger is released, but preserve that brightness level and <em>resume</em> at that brightness when the button is re-pressed.
+1. How can we modify the code above to immediately turn off the LED when the finger is released, but 
+preserve that brightness level and <em>resume</em> at that brightness when the button is re-pressed.
 
-2. If the LED has faded in and out a total of 3 times, immediately turn off the LED, no matter whether the
-pushbutton is pressed or not.
+2. If the LED has faded in and out a total of 3 times, immediately turn off the LED, no matter whether 
+the pushbutton is pressed or not.
 
 Hint1: Nix the for loops. Create some global variables.
 Hint2: This is hard!

@@ -28,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  if (ledOn) {
+  if (ledOn == true) {
     digitalWrite(ledPin, HIGH);
   }
   else {
@@ -108,7 +108,7 @@ void loop() {
 <b>Exercise 1:</b>
 1. Print the button state to the Serial Monitor. What values does it print when the button is pressed/
 released?
-2. What do you recognize about the values `true`, `HIGH`, and `1` vs. `false`, `LOW`, and `0`?
+2. What do you recognize about the values <em>true</em>, <em>HIGH</em>, and <em>1</em> vs. <em>false</em>, <em>LOW</em>, and <em>0</em>?
 </pre>
 
 
@@ -164,7 +164,7 @@ void loop() {
 
       // button has been clicked! Change LED state
 
-      if (ledOn) {
+      if (ledOn == true) {
         ledOn = false;  // the LED was on, but button has been clicked, so let's turn it off.
       }
       else {
@@ -180,7 +180,7 @@ void loop() {
 }
 
 void setLED() {
-  if (ledOn) {
+  if (ledOn == true) {
     digitalWrite(ledPin, HIGH);
   }
   else {
@@ -202,7 +202,7 @@ The ledOn state?
 
 | # | status | oldState | newState | ledOn |
 | --- | ---- | ---- | ---- | ---- |
-| 1 | before button is pressed | false | LOW | false |
+| 1 | before button is pressed | LOW | LOW | false |
 | 2 | immediately when button pressed, 1st time |  |  |  |
 | 3 | button still held down |  | HIGH | true |
 | 4 | finger released 1st time | HIGH | LOW |  |
