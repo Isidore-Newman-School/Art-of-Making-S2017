@@ -1,41 +1,150 @@
-To be completed...
+# 9. Arrays
 
-<!-- Arrays are ways to a collection of variables.
+## 0. Overview
 
-### Declaring Arrays
+|  | Topics | Exercises | Circuit |
+| --- | --- | --- | --- |
+| I | [Declaring Arrays](i-declaring-arrays) | - | - |
+| II | [Accessing Arrays](ii-accessing-arrays) | [Exercise 0](#ex0) <br> [Exercise 1](#ex1) | Neopixel strip |
+| III | [Arrays with For Loops](iii-arrays-with-for-loops) | |
+| IV | [Aggregation](iv-aggregation) | |
+| V | [Strings](v-strings) | |
+
+---
+
+## I. Declaring Arrays
+Think of arrays as an ordered list of values (numbers, strings, etc.). You can declare arrays with or without initializing the values. All of the following are valid:
+
 ```c++
-int myPins[] = {2, 4, 8, 3, 6};
+int myValues[] = {2, 4, 8, -3, 6};
+int myValues[5];
+int myValues[5] = {2, 4, 8, -3, 6};
 ```
 
+## II. Accessing Arrays
+We use an index- the value between "[]" - to access the values in the array. Index values start at 0. To access the first and third items in the myValues[] array:
 
-### Accessing Elements
-The values in arrays are accessed using an index, beginning with zero. E.g.:
 ```c++
-int delayTimes[] = {200, 400, 85, 390, 610};
-// delayTimes[0] is 2
-// delayTimes[1] is 4
-// ...
-// delayTimes[4] is 6
-int totalTime = delayTimes[0] + delayTimes[1];  // 600
+int myValues[] = {2, 4, 8, -3, 6};
+int val1 = myValues[0];   // equals 2
+int val2 = myValues[2];   // equals 8
 ```
 
-To assign elements in an array to a value:
-```c++
-delayTimes[1] = 1000;
-```
+We can also use the index to set values of the array.
 
-### Arrays with For Loops
+**NOTE** in the example below that we declare the array with 3 (the number of items in the array), but since we start counting at 0, the last item in the array is accessed with `myArray[2]`.
+
 ```c++
-for (int i = 0; i < 5; i++) {
-  Serial.println(myPins[i]);
+int myArray[3];
+
+void setup()  {
+  myArray[0] = 10;
+  myArray[1] = -2;
+  myArray[2] = 4;
 }
 ```
 
+---
 
+<a name="ex0"></a>
+<pre>
+<b>Exercise 0:</b>
+After the loop has run one time, what is the value of <em>num</em> in the code below ?
+</pre>
+
+```c++
+int myArray[] = {100, 25, 30, 1, 90};
+
+void setup() {
+  myArray[2] = 60;
+}
+
+void loop() {
+  myArray[3]--;
+  int num = myArray[3] - myArray[0] + myArray[2];
+}
+```
+
+---
+
+Let's create an array of delay times and blink an LED for each of the delay times in the array:
+
+```c++
+int delayTimes[] = {1000, 500, 200, 600};
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  blinky(delayTimes[0]);
+  blinky(delayTimes[1]);
+  blinky(delayTimes[2]);
+  blinky(delayTimes[3]);
+}
+
+void blinky(delayT) {
+  digitalWrite(ledPin, HIGH);
+  delay(delayT);
+  digitalWrite(ledPin, LOW);
+  delay(delayT);
+}
+```
+
+---
+
+<a name="ex1"></a>
+<pre>
+<b>Exercise 1:</b>
+Create a new array- delayHalfTimes[]. The values in this array should be half of the time
+in the delayTimes[] array, <em>for any arbitrary set of values in the delayTimes[] array</em>.
+
+Call blinky() with the values in this new array.
+</pre>
+
+---
+
+## III. Arrays with For Loops
+
+Frequently we use for loops to quickly access values in an array. For example, we can simplify the previous example with a for loop:
+
+```c++
+int delayTimes[] = {1000, 500, 200, 600};
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  for (int i = 0; i < 4; i++) {
+    blinky(delayTimes[i]);
+  }
+}
+
+void blinky(delayT) {
+  digitalWrite(ledPin, HIGH);
+  delay(delayT);
+  digitalWrite(ledPin, LOW);
+  delay(delayT);
+}
+```
+
+---
+
+<a name="ex2"></a>
+<pre>
+<b>Exercise 2:</b>
+Setup a circuit with a speaker. How can we use a for loop to simplify the code below and play all
+of the notes in the notes[] array?
+</pre>
+
+---
 
 ```c++
 // notes to play, corresponding to the 3 sensors:
-int notes[] = {500, 300, 200};
+int notes[] = {523, 784, 200};
 
 void setup() {
     tone(8, notes[0], 500);
@@ -51,34 +160,36 @@ void loop() {
 }
 ```
 
-**Exercise**
-Put the first 7 notes of "Mary Had a Little Lamb" in an array called notes[]. Use a for loop and tone() to play the notes of the array in order.
+---
+
+<a name="ex3"></a>
+<pre>
+<b>Exercise 3:</b>
+Add an array called noteDurations[] with numbers between 100 and 4000. These numbers represent the
+amount of time that each note in the notes[] array should play.
+
+Change the notes[] array and use noteDurations[] to play the tune of, "Here comes the bride"
+(half note, dotted quarter note, eighth note, whole note).
+</pre>
+
+---
+
+## IV. Aggregation
 
 
-**(2)**
-What does sum equal?
 
-```c++
-int lotteryTicket[] = { 40, 23, 11, 12, 52};
-int sum = lotteryTicket[0] + lotteryTicket[3];
-```
+## V. Strings
 
-**(3)** Create two arrays:
-1. an array of 5 elements called lightLevels[] with numbers between 0 and 255.
-2. an array called durations[] with 5 numbers between 100 and 1000.  
-
-Use a for loop to cycle through the elements of the arrays. Use **analogWrite()** to turn on an LED at the brightness level in the lightLevels[] array and keep it on for the amount of time in the durations[] array.
-
-
-Strings can also be represented as arrays of characters ("char" data type). For example:
+Strings can also be represented as arrays of characters ("char" data type). For example, all of the following
+are valid:
 
 ```c++
 // all of these are valid:
 char myString[] = "arduino";
-// char myString[8] =  "arduino";
-// char myString[] = {'a', 'r', 'd', 'u', 'i', 'n', 'o'};
-// char myString[8] = {'a', 'r', 'd', 'u', 'i', 'n', 'o'};
-// char myString[8] = {'a', 'r', 'd', 'u', 'i', 'n', 'o', '\0'};
+char myString[8] =  "arduino";
+char myString[] = {'a', 'r', 'd', 'u', 'i', 'n', 'o'};
+char myString[8] = {'a', 'r', 'd', 'u', 'i', 'n', 'o'};
+char myString[8] = {'a', 'r', 'd', 'u', 'i', 'n', 'o', '\0'};
 
 void setup(){
   Serial.begin(9600);
@@ -92,114 +203,3 @@ for (int i = 0; i < 7; i++){
 }
 
 ```
-
-**(3)** The **sosPulses[]** array stores the morse code pulses of the SOS signal. Use a for loop and a conditional statement to make an LED blink the SOS signal in accordance with [International Morse Code Rules](http://morsecode.scphillips.com/morse2.html):
-
-* dot = one unit
-* dash = three units
-* space between the components of one character is one unit
-* space between characters is three units
-
-
-
-```c++
-char sosPulse[21] = ". . .   - - -   . . .";
-
-void setup(){
-  Serial.begin(9600);
-}
-
-void loop(){
-  // turn LED on
-}
-
-```
-
-#5. Neopixels
-
-![alt text](https://cdn-shop.adafruit.com/1200x900/1138-00.jpg)
-
-[Neopixels](https://learn.adafruit.com/adafruit-neopixel-uberguide) are individually addressable, RGB LEDs. That means each LED in the strip can be its own color. RGB stands for red, green, blue. By selecting a value for each channel, we can create any color in the rainbow.
-
-## Install Library
-The first step is to install the Neopixel Library from the Library Manager:
-
-![alt text](http://codevista.net/wp-content/uploads/2015/08/Arduino-Library-Manager.png)
-
-![alt text](images/manager.png)
-
-## Wiring
-Plugging in Neopixels is pretty straigtforward. Look closely at the strip. The GND jumper must go to GND, 5V to 5V, and the middle pin (data) can go to any digital pin. Most code uses pin 6.
-
-## Bare Minimum Neopixel Sketch
-Every Neopixel sketch must include the library by including this file:
-```c++
-#include <Adafruit_NeoPixel.h>
-```
-
-This next block of code defines which pin we're using to control the Neopixels and how many pixels are in our strip. We then initialize the "strip" (in other example files, it's called "pixels"; the name is irrelevant as long as we're consistent).
-
-```c++
-#define PIXEL_PIN    6   
-#define PIXEL_COUNT  3
-
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
-```
-
-Next we have to begin the strip in the setup():
-
-```c++
-void setup() {
-  strip.begin();
-  strip.show();
-}
-```
-
-Finally, we're ready to set the pixel color in the draw() with the function:
-
-```c++
-strip.setPixelColor( /* pixel # */ , strip.Color( /* red, green, blue */ ) ););
-strip.show();
-```
-
-Putting it all together, we can write a sketch that turns the first two pixels red:
-
-```c++
-#include <Adafruit_NeoPixel.h>   
-#define PIXEL_PIN    6   
-#define PIXEL_COUNT  7
-
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
-
-void setup() {
-  strip.begin();
-  strip.show();
-}
-
-void loop() {
-   strip.setPixelColor(0, strip.Color(255,0,0));
-   strip.setPixelColor(1, strip.Color(255,0,0));
-   strip.show();
-}
-
-```
-
-The following functions can be used to control the pixels:
-* **strip.setPixelColor**(pin, color)
-* **strip.Color**(red, green, blue) - this function returns a color that can be used inside of strip.setPixelColor()
-* **strip.clear**() - this function clears the colors (must be followed by strip.show())
-* **strip.show**() - this function must be called after the pixel colors are set in order to see the changes
-* **strip.setBrightness**() - sets the overall brightness of all the LEDs; takes a single argument, a number from 0 (off) to 255 (max brightness).
-
-To get a particular color of the rainbow, set the correct RGB values. Check out [http://www.colorpicker.com/](http://www.colorpicker.com/) to get the RGB values of any color:
-
-![alt text](images/colorpicker.png)
-
-**Exercise**
-**(1)** Set each LED to a different color of the rainbow.
-
-**(2)** How do we turn the Neopixels off? Make the Neopixels blink.
-
-**(3)** Open the example file StrandTest (File > Examples > Adafruit Neopixel > strandtest). What do each of the functions do?
-
-**(4)** Make the Neopixels fade in and out using a for loop and the setBrightness() function. -->
