@@ -84,7 +84,7 @@ void loop() {
   blinky(delayTimes[3]);
 }
 
-void blinky(delayT) {
+void blinky(int delayT) {
   digitalWrite(ledPin, HIGH);
   delay(delayT);
   digitalWrite(ledPin, LOW);
@@ -123,7 +123,7 @@ void loop() {
   }
 }
 
-void blinky(delayT) {
+void blinky(int delayT) {
   digitalWrite(ledPin, HIGH);
   delay(delayT);
   digitalWrite(ledPin, LOW);
