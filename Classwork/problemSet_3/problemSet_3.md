@@ -9,7 +9,9 @@ Problem sets should be completed **individually**, but *if you have questions, d
 3. *To submit assignment*, email this fleshed-out template to Ms. deBB
 
 ---
-**(0)** The grades for each student are stored in test1[] and test2[] arrays. Write a function **calculateAverage()** that takes a parameter- a student number (0, 1, 2, or 3)- and returns the student's average on both test1 and test2. It should print this average to the Serial Monitor.
+**(0)** The grades for all students on the first test are stored in test1[]; test2[] holds the grades from the second test. So for example, student1 scored a 99 and a 76 on tests 1 and 2 respectively; student2 scored a 68 and a 92, etc.
+
+Write a function **calculateAverage()** that takes a parameter- a student number (0, 1, 2, or 3)- and returns the student's average (average of test1 and test2 scores). It should print this average to the Serial Monitor.
 
 ```c++
 int test1[4] = {99, 68, 88, 92};
@@ -17,6 +19,9 @@ int test2[4] = {76, 92, 88, 81};
 
 void setup(){
   Serial.begin(9600);
+
+  calculateAverage(0);
+  calculateAverate(3);    // should print 88
 }
 
 void loop(){}
