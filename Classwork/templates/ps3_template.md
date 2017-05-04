@@ -16,10 +16,15 @@ char sosPulse[21] = ". . .   - - -   . . .";
 void setup(){
   Serial.begin(9600);
 
+  //calculateAverage(0);
+  //calculateAverage(3);
+
   //sumGrades();
 
   randomSeed(analogRead(0));
   //Serial.println("The winner is: " + getWinner());
+
+  calculateAverage(0);
 
 }
 
