@@ -7,7 +7,7 @@
 | I | [Declaring Arrays](i-declaring-arrays) | - | - |
 | II | [Accessing Arrays](ii-accessing-arrays) | [Exercise 0](#ex0) <br> [Exercise 1](#ex1) | Neopixel strip |
 | III | [Arrays with For Loops](iii-arrays-with-for-loops) | |
-| IV | [Aggregation](iv-aggregation) | |
+| IV | [Aggregation](iv-aggregation) | [Exercise 4](#ex4) |
 | V | [Strings](v-strings) | |
 
 ---
@@ -176,7 +176,33 @@ Change the notes[] array and use noteDurations[] to play the tune of, "Here come
 
 ## IV. Aggregation
 
+We can use a for loop to aggregate (add up), find the min or max in an array, and many other math operations. For example, to find the sum of all the items in an array:
 
+```c++
+int numbers[] = {5, 5, 0, 1, 1, 2, 10, 9};
+
+void setup() {
+  Serial.begin(9600);
+
+  int sum = 0;
+  for (int i = 0; i < 4; i++) {
+    sum += numbers[i];
+  }
+  Serial.println(sum);
+}
+
+void loop() { }
+```
+
+---
+
+<a name="ex4"></a>
+<pre>
+<b>Exercise 4:</b>
+Find the sum of every other item in the numbers[] array. Print this sum to the console.
+</pre>
+
+---
 
 ## V. Strings
 
