@@ -159,31 +159,6 @@ int input = analogRead(lightPin);
 int brightness = map(input, 0, 1023, 0, 255);
 ```
 
-## Loops
-[For loops](https://www.arduino.cc/en/Reference/For) allow us to repeat certain code for a specified number of times. Here is the syntax:
-
-![alt text](https://www.arduino.cc/en/uploads/Reference/ForLoopIllustrated.png)
-
-We can use this control structure to make an LED fade in:
-
-```c++
-int ledPin = 11;
-
-void setup() {
-    pinMode(ledPin, OUTPUT);
-}
-
-void loop() {
-    fadeIn();
-}
-
-void fadeIn() {
-    for (int i = 0; i < 255; i++) {
-        analogWrite(ledPin, i);
-    }
-}
-```
-
 ## Control Structures
 We can use conditional logic to add complexity to our sketches.
 * [if / else if / else](https://www.arduino.cc/en/Reference/Else)
@@ -233,17 +208,27 @@ void loop() {
 * Serial.print() will print something on the same line
 * Serial.println() prints and creates a new line
 
-## Common Circuits
+## Loops
+[For loops](https://www.arduino.cc/en/Reference/For) allow us to repeat certain code for a specified number of times. Here is the syntax:
 
-### LED Fade
+![alt text](https://www.arduino.cc/en/uploads/Reference/ForLoopIllustrated.png)
 
-![alt text] (Notes/images/ledfade.png)
+We can use this control structure to make an LED fade in:
 
+```c++
+int ledPin = 11;
 
-### Light Sensor Circuit
+void setup() {
+    pinMode(ledPin, OUTPUT);
+}
 
-![alt text](https://cdn-learn.adafruit.com/assets/assets/000/000/459/original/light_cdspulldowndiag.gif?1447975687)
+void loop() {
+    fadeIn();
+}
 
-### Pushbutton
-
-![alt text] (https://lh3.googleusercontent.com/NAipfzKrTgsqNRtxh68_uI8Fmvb6d_lvNedSJgoV3NUvbC4apZFt9vZCSGRvd4jPPFXAbxOcpVkDlIHcsDG_RcOb3if-SsisEsqAiGIvsZc7MDn1pA4IIJK8UbgAWbhF0iPdb7vc)
+void fadeIn() {
+    for (int i = 0; i < 255; i++) {
+        analogWrite(ledPin, i);
+    }
+}
+```
